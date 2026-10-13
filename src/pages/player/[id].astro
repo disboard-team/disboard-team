@@ -39,7 +39,13 @@ const playerWars = getPlayerWars(player.player_id, wars);
             </div>
             <div class="flex flex-sb">
               <div class="flex f-vertical mr-20">
-                <span class="player-in">Miembro desde: {player.player_registry?.in || '2018-09-06'}</span>
+                <span class="player-in">
+                  <span class="has-tooltip">
+                    <i class="ri-user-add-line" aria-label="Miembro desde" tabindex="0"></i>
+                    <span class="tooltip" role="tooltip">Miembro desde</span>
+                  </span>
+                  {player.player_registry?.in || '2018-09-06'}
+                </span>
                 {player.switch_fc && <span class="player-fc">Switch FC: {player.switch_fc}</span>}
               </div>
               <div class="profile-buttons">

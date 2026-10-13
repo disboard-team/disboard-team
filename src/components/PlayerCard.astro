@@ -6,26 +6,41 @@ interface Props {
   tag?: string;
   inDate?: string;
   fc?: string;
+  role?: string;
 }
 
-const { avatarURL, country = 'es', name, tag, inDate, fc } = Astro.props;
+const { avatarURL, country = 'es', name, tag, inDate, fc, role } = Astro.props;
 const countryCode = (country || 'es').toLowerCase();
 const avatar = avatarURL || 'https://cdn.discordapp.com/embed/avatars/0.png';
 ---
 
 <div class="player-card-inner">
-  <img src={avatar} alt={name} loading="lazy" />
+  <div class="player-avatar-wrap">
+    <img src={avatar} alt={name} loading="lazy" />
+    {role && (
+      <span class={`player-role-badge role-${role.toLowerCase().replace(/\s+/g, '-')}`}>
+        {role}
+      </span>
+    )}
+  </div>
   <div class="player-description">
-    <div>
-      <span class={`fi fi-${countryCode} fis`}></span>
+    <div class="player-header-row">
+      <span class={`fi fi-${countryCode} fis player-flag`}></span>
       <span class="player-name">{name}</span>
       {tag && <span class="player-tag">{tag}</span>}
     </div>
-    <div>
-      <span class="player-in">Miembro desde: {inDate || '2018-09-06'}</span>
+    <div class="player-meta-row">
+      <span class="player-in">
+        <span class="has-tooltip">
+          <i class="ri-user-add-line" aria-label="Miembro desde" tabindex="0"></i>
+          <span class="tooltip" role="tooltip">Miembro desde</span>
+        </span>
+        {inDate || '2018-09-06'}
+      </span>
     </div>
     {fc && (
-      <div>
+      <div class="player-fc-row">
+        <i class="ri-gamepad-line"></i>
         <span class="player-fc">{fc}</span>
       </div>
     )}

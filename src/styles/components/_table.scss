@@ -1,149 +1,300 @@
 .war-table-container {
-  background-color: rgba(17, 17, 17, 0.6);
-  padding: 0px 10px 0px 10px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 25px;
 
-  .war {
-    display: inline-flex;
-    /*width: calc(50% - 2px);*/
+  .war-empty {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    text-align: center;
+    background: rgba(16, 18, 28, 0.78);
+    border-radius: 0;
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .war-card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    background-color: $bg-color-tables;
-    position: relative;
-    font-size: 16px;
-    margin: 10px 0 10px;
+    background: linear-gradient(135deg, rgba(22, 25, 38, 0.88) 0%, rgba(13, 15, 24, 0.94) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    padding: 12px 14px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
-    .team {
-      display: inline-flex;
-      width: calc(50%);
-      &:nth-child(1) {
-        text-align: left;
-        .score {
-          text-align: right;
-          display: block;
-          margin-left: 5px;
-        }
-      }
+    &:hover {
+      border-color: rgba(191, 19, 117, 0.55);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 14px rgba(191, 19, 117, 0.2);
+      transform: translateY(-2px);
+    }
+  }
 
-      &:nth-child(2) {
-        text-align: right;
-        .info {
-          padding: 15px 10px 10px 5px;
-        }
-        .score {
-          text-align: left;
-          display: block;
-          margin-right: 5px;
-        }
-      }
+  .war-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.6);
 
-      .logo {
-        width: 50px;
-        height: 50px;
+    .war-meta-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .war-date {
         display: inline-flex;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        align-items: center;
+        gap: 4px;
+        color: rgba(255, 255, 255, 0.75);
       }
 
-      .info {
-        position: relative;
-        padding: 15px 5px 10px 10px;
+      .war-tag {
+        padding: 2px 7px;
+        border-radius: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.625rem;
+
+        &.war-tag-modality {
+          background: rgba(14, 165, 233, 0.15);
+          color: #38bdf8;
+          border: 1px solid rgba(14, 165, 233, 0.3);
+        }
+
+        &.war-tag-type {
+          background: rgba(191, 19, 117, 0.15);
+          color: #f472b6;
+          border: 1px solid rgba(191, 19, 117, 0.35);
+        }
+      }
+    }
+
+    .war-meta-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .war-game-badge {
+        font-size: 0.6875rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .war-table-btn {
         display: inline-flex;
-        width: calc(100% - 43px);
+        align-items: center;
+        gap: 4px;
+        padding: 3px 8px;
+        background: rgba(255, 255, 255, 0.06);
         color: #fff;
+        border-radius: 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.6875rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
 
-        .name {
-          flex: 1;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          font-size: 15px;
+        &:hover {
+          background: $primary;
+          border-color: $primary-light;
+          box-shadow: 0 0 8px $primary-glow;
         }
-        .tag {
-          flex: 1;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .war-match-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    .war-team {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      gap: 10px;
+      min-width: 0;
+
+      &.team-left {
+        justify-content: flex-start;
+
+        .war-team-info {
+          text-align: left;
         }
-        .score {
-          border-radius: 4px;
-          padding: 1px 5px 0 5px;
-          font-weight: bold;
+      }
+
+      &.team-right {
+        justify-content: flex-end;
+
+        .war-team-info {
+          text-align: right;
+        }
+      }
+
+      .war-team-logo {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+        flex-shrink: 0;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .war-team-info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .war-team-name {
+          font-size: 0.875rem;
+          font-weight: 600;
           color: #fff;
-          font-size: 15px;
-          height: 25px;
-          position: relative;
-
-          &.win {
-            background-color: rgba(104, 214, 57, 0.5);
-          }
-          &.lose {
-            background-color: rgba(232, 93, 117, 0.6);
-          }
-          &.draw {
-            background-color: rgba(2, 169, 255, 0.4);
-          }
-          .penal {
-            position: absolute;
-            right: 0;
-            left: 0;
-            text-align: center;
-            bottom: -10px;
-            z-index: 1;
-            span {
-              border-radius: 4px;
-              padding: 2px 3px;
-              font-weight: bold;
-              color: #fff;
-              font-size: 9px;
-              background-color: rgba(146, 86, 243, 0.9);
-            }
-          }
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
+
+        .war-team-tag {
+          font-size: 0.6875rem;
+          color: rgba(255, 255, 255, 0.45);
+          font-weight: 300;
+        }
+      }
+
+      .war-score {
+        min-width: 48px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: monospace;
+        border-radius: 0;
+        padding: 0 8px;
+        position: relative;
+        flex-shrink: 0;
+
+        &.win {
+          background: rgba(34, 197, 94, 0.16);
+          border: 1px solid rgba(34, 197, 94, 0.45);
+          color: #4ade80;
+          box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+        }
+
+        &.lose {
+          background: rgba(239, 68, 68, 0.14);
+          border: 1px solid rgba(239, 68, 68, 0.4);
+          color: #f87171;
+        }
+
+        &.draw {
+          background: rgba(148, 163, 184, 0.15);
+          border: 1px solid rgba(148, 163, 184, 0.3);
+          color: #cbd5e1;
+        }
+
+        .war-penal {
+          position: absolute;
+          bottom: -8px;
+          font-size: 0.5625rem;
+          font-weight: 700;
+          padding: 1px 4px;
+          border-radius: 0;
+          background: #7c3aed;
+          color: #fff;
+        }
+      }
+    }
+
+    .war-vs-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+
+      span {
+        font-size: 0.625rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.5px;
       }
     }
   }
 }
 
-@media (max-width: 575px) {
-  .war {
-    width: 100%;
+.war-table-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 1rem;
+  background: rgba(16, 18, 28, 0.96);
+  color: #fff;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 1px solid rgba(191, 19, 117, 0.4);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(4px);
+  }
+
+  .war-table-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .war-table-modal-img {
+    max-width: 85vw;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
-@media (max-width: 767px) {
-  .team .tag {
-    display: block;
-  }
-  .team .name {
-    display: none;
-  }
-  .mobile-ok {
-    display: block;
-  }
-  .mobile-no {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .team .tag {
-    display: block;
-  }
-  .team .name {
-    display: none;
-  }
-  .desktop-no {
-    display: none;
-  }
-  .desktop-ok {
-    display: block;
-  }
-}
-@media (min-width: 992px) {
-  .team .tag {
-    display: none;
-  }
-  .team .name {
-    display: block;
+
+@media (max-width: 640px) {
+  .war-table-container {
+    .war-match-row {
+      .war-team {
+        .war-team-logo {
+          width: 32px;
+          height: 32px;
+        }
+        .war-team-info .war-team-name {
+          font-size: 0.75rem;
+        }
+        .war-score {
+          min-width: 40px;
+          height: 28px;
+          font-size: 0.875rem;
+        }
+      }
+    }
   }
 }

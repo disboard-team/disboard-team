@@ -1,52 +1,57 @@
 .text-btn {
   position: relative;
+  display: inline-block;
 }
 
-.text-btn a:after {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  -ms-transform: translate(0, -50%) rotate(45deg);
-  transform: translate(0, -50%) rotate(45deg);
-}
+.text-btn a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, rgba(191, 19, 117, 0.9) 0%, rgba(135, 11, 82, 0.95) 100%);
+  padding: 12px 28px;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+  box-shadow: 0 4px 14px rgba(191, 19, 117, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
-@media only screen and (max-width: 767px) {
-  .text-btn a:after {
+  &::after {
     content: "";
-    width: 2%;
-    padding: 2% 0 0;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    -ms-transform: translate(0, -50%) rotate(45deg);
-    transform: translate(0, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    margin-left: 12px;
+    transform: rotate(45deg);
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #e62092 0%, #bf1375 100%);
+    box-shadow: 0 6px 20px rgba(191, 19, 117, 0.55);
+    transform: translateY(-2px);
+
+    &::after {
+      transform: translateX(3px) rotate(45deg);
+    }
   }
 }
 
 .detail .text-btn {
   margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .detail .text-btn a {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
-  padding: 30px 0;
-  display: block;
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  background: rgba(191,19,117,.6);
-  position: relative;
-  transition: .3s;
-
-  &:hover {
-    background-color: $bg-color-elements-hovered;
-  }
+  padding: 16px 24px;
+  display: inline-flex;
 }

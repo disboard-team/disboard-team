@@ -20,7 +20,7 @@ const normalMembers = players.filter((p) => !p.is_staff);
           <span>Staff</span>
         </h3>
       </div>
-      <div class="detail flex-container players-container">
+      <div class="detail players-container">
         {staffMembers.map((player) => (
           <a class="player-card" href={`/player/${player.player_id}`}>
             <PlayerCard
@@ -30,6 +30,7 @@ const normalMembers = players.filter((p) => !p.is_staff);
               tag={player.player_tag}
               inDate={player.player_registry.in}
               fc={player.switch_fc}
+              role={player.player_registry?.role}
             />
           </a>
         ))}
@@ -42,7 +43,7 @@ const normalMembers = players.filter((p) => !p.is_staff);
               <span>Miembros</span>
             </h3>
           </div>
-          <div class="detail flex-container players-container members">
+          <div class="detail players-container members">
             {normalMembers.map((player) => (
               <a class="player-card" href={`/player/${player.player_id}`}>
                 <PlayerCard
@@ -52,6 +53,7 @@ const normalMembers = players.filter((p) => !p.is_staff);
                   tag={player.player_tag}
                   inDate={player.player_registry.in}
                   fc={player.switch_fc}
+                  role={player.player_registry?.role}
                 />
               </a>
             ))}

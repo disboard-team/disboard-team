@@ -1,44 +1,23 @@
-body::-webkit-scrollbar {
-  width: 8px;
-  background-color: rgba(191, 19, 117, 0.6);
-}
-
-body::-webkit-scrollbar-corner {
-  background-color: rgba(191, 19, 117, 0.6);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(191, 19, 117, 0.6);
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #050707;
-}
-
-body::-webkit-scrollbar-track-piece {
-  background-color: #050707;
-}
-
-
-
-
+body::-webkit-scrollbar,
 .outer-team-list::-webkit-scrollbar {
-  width: 8px;
-  background-color: rgba(191, 19, 117, 0.6);
+  width: 6px;
+  height: 6px;
 }
 
-.outer-team-list::-webkit-scrollbar-corner {
-  background-color: rgba(191, 19, 117, 0.6);
-}
-
-.outer-team-list::-webkit-scrollbar-thumb {
-  background-color: rgba(191, 19, 117, 0.6);
-}
-
+body::-webkit-scrollbar-track,
 .outer-team-list::-webkit-scrollbar-track {
-  background-color: #050707;
+  background: #080a10;
 }
 
-.outer-team-list::-webkit-scrollbar-track-piece {
-  background-color: #050707;
+body::-webkit-scrollbar-thumb,
+.outer-team-list::-webkit-scrollbar-thumb {
+  background: rgba(191, 19, 117, 0.6);
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.outer-team-list::-webkit-scrollbar-thumb:hover {
+  background: $primary-light;
+  box-shadow: 0 0 6px $primary-glow;
 }

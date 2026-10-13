@@ -27,7 +27,7 @@ form {
     margin-right: 10px;
     label {
       display: block;
-      font-size: 13px;
+      font-size: 0.8125rem;
       font-weight: 300;
     }
     input {
@@ -38,7 +38,7 @@ form {
       height: 30px;
       color: #fff;
       padding-left: 5px;
-      font-size: 14px;
+      font-size: 0.875rem;
       &:focus {        
         outline-color: $bg-color-elements;
       }        

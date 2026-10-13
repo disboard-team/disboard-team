@@ -1,5 +1,6 @@
 .player-container {
   align-content: stretch;
+  gap: 16px;
 }
 
 .flex {
@@ -14,155 +15,236 @@
   }
 }
 
-
 .player-stats {
   color: #fff;
   padding: 0;
+
   .heading {
-    margin: 0 0 10px !important;
+    margin: 0 0 16px !important;
   }
 }
 
 .player-score {
-  background-color: $container-background;
-  padding: 10px;
+  background: linear-gradient(135deg, rgba(22, 25, 38, 0.88) 0%, rgba(13, 15, 24, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  padding: 14px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+
   .player-score-inner {
-    background-color: $bg-color-tables;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
     width: 100%;
   }
-  .stats-icon {
-    font-size: 30px;
-    margin-right: 10px;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .stats-label {
-    font-size: 13px;
-    font-weight: 300;
-  }
+
   .stats-item {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(191, 19, 117, 0.4);
+    }
   }
-  .stats-item:nth-child(-n+2) {
-    margin-bottom: 20px;
+
+  .stats-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 0;
+    background: rgba(191, 19, 117, 0.15);
+    border: 1px solid rgba(191, 19, 117, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    .stats-icon {
+      font-size: 1.25rem;
+      color: $primary-light;
+      line-height: 1;
+    }
+  }
+
+  .stats-data {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .stats-label {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .stats-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: monospace;
+    letter-spacing: 0.5px;
+
+    &.stats-value-highlight {
+      color: $accent-gold;
+      text-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+    }
   }
 }
 
 .player-profile {
-  background-color: $container-background;
-  padding: 10px;
+  background: linear-gradient(135deg, rgba(22, 25, 38, 0.88) 0%, rgba(13, 15, 24, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  padding: 16px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   img {
-    height: 150px;
-    width: 150px;
-    padding: 10px;
-    background-color: $bg-color-tables;
-    margin-right: 10px;
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 0;
+    background-color: #0b0d14;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
   }
+
   .player-description {
     color: #fff;
-    padding: 10px 15px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: space-between;
-    background-color: $bg-color-tables;
+    gap: 10px;
     width: 100%;
+    min-width: 0;
 
     .flag-icon,
     .fi {
-      margin-right: 10px;
+      margin-right: 8px;
+      border-radius: 0;
     }
 
     .player-name {
-      position: relative;
-      margin-right: 20px;
-      
-      &:before {
-        content: "";
-        width: 1px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.5);
-        position: absolute;
-        top: -2px;
-        right: -10px;
-        -webkit-transform: rotate(30deg);
-        transform: rotate(30deg);
-      }
-    }
-    .player-tag {
-      font-size: 12px;
-      font-weight: 200;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+      margin-right: 12px;
     }
 
+    .player-tag {
+      font-size: 0.8125rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .player-in {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 4px;
+
+      i {
+        margin-right: 4px;
+        font-size: 0.75rem;
+      }
+    }
+
+    .player-fc {
+      font-size: 0.75rem;
+      font-family: monospace;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px 8px;
+      border-radius: 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: inline-block;
+      width: fit-content;
+    }
   }
+
   .profile-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
+    margin-top: 4px;
 
     .text-btn {
       margin: 0;
 
       a {
         width: auto;
-        min-width: 140px;
-        padding: 8px 24px 8px 12px;
-        font-size: 13px;
+        min-width: 130px;
+        padding: 8px 18px 8px 14px;
+        font-size: 0.75rem;
+        font-weight: 600;
         white-space: nowrap;
       }
     }
   }
-
-  .text-btn a {
-    width: 150px;
-    padding: 10px;
-  }
 }
 
 .player-profile-war-table {
-  width: 60%;
+  width: 65%;
+  margin-top: 30px;
+
+  .heading {
+    margin: 0 0 16px !important;
+  }
 }
 
 @media only screen and (min-width: 961px) {
   .player-profile {
-    display: flex;
-    width: calc(60% - 5px); 
-    margin-right: 10px; 
+    width: calc(60% - 8px); 
   }
   .player-stats {
-    display: flex;
-    width: calc(40% - 5px);    
+    width: calc(40% - 8px);    
   }
 }
 
 @media only screen and (max-width: 960px) {
   .player-profile {
-    display: flex;
-    width: calc(60% - 5px); 
-    margin-right: 10px; 
+    width: 100%;
+    margin-bottom: 16px;
   }
   .player-stats {
-    display: flex;
-    width: calc(40% - 5px);    
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .player-profile {
-    display: flex;
-    width: 100%; 
-    margin-right: 0; 
-  }
-  .player-stats {
-    display: flex;
-    width: 100%;    
+    width: 100%;
   }
   .player-profile-war-table {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .player-profile {
+    flex-direction: column;
+    text-align: center;
+
+    .player-description {
+      align-items: center;
+    }
+
+    .profile-buttons {
+      justify-content: center;
+    }
+  }
+
+  .player-score .player-score-inner {
+    grid-template-columns: 1fr;
   }
 }

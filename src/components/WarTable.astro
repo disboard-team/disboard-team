@@ -24,9 +24,9 @@ interface Props {
 const { wars } = Astro.props;
 ---
 
-<div class="flex war-table-container">
+<div class="war-table-container">
   {wars.length === 0 && (
-    <div style="color: #fff; padding: 20px;">No hay wars registradas.</div>
+    <div class="war-empty">No hay wars registradas.</div>
   )}
 
   {wars.map((war) => {
@@ -40,57 +40,109 @@ const { wars } = Astro.props;
     };
 
     return (
-      <div class="war" data-type={war.type} data-modality={war.modality}>
-        <!-- Team 1 -->
-        <div class="team">
-          {team1.logo && <img src={team1.logo} alt={team1.name} class="logo" loading="lazy" />}
-          <span class="info">
-            <span class="name">{team1.name}</span>
-            <span class="tag">{team1.tag}</span>
-            <span class={`score ${getScoreClass(team1, team2)}`}>
+      <div class="war war-card" data-type={war.type} data-modality={war.modality}>
+        <!-- War Header Bar -->
+        <div class="war-card-header">
+          <div class="war-meta-left">
+            <span class="war-date">
+              <i class="ri-calendar-line"></i> {war.played_at}
+            </span>
+            {war.modality && <span class="war-tag war-tag-modality">{war.modality}</span>}
+            {war.type && <span class="war-tag war-tag-type">{war.type}</span>}
+          </div>
+          <div class="war-meta-right">
+            {war.game && (
+              <span class="war-game-badge">
+                {war.game.name} · {war.game.mode}
+              </span>
+            )}
+            {war.table_img && (
+              <button
+                type="button"
+                class="war-table-btn"
+                data-image={war.table_img}
+                aria-label="Ver captura de la tabla"
+              >
+                <i class="ri-image-line"></i>
+                <span>Tabla</span>
+              </button>
+            )}
+          </div>
+        </div>
+
+        <!-- War Match Row -->
+        <div class="war-match-row">
+          <!-- Team 1 -->
+          <div class={`war-team team-left ${getScoreClass(team1, team2)}`}>
+            {team1.logo && <img src={team1.logo} alt={team1.name} class="war-team-logo" loading="lazy" />}
+            <div class="war-team-info">
+              <span class="war-team-name">{team1.name}</span>
+              <span class="war-team-tag">{team1.tag}</span>
+            </div>
+            <div class={`war-score ${getScoreClass(team1, team2)}`}>
               {team1.score}
               {team1.penality ? (
-                <span class="penal">
-                  <span>{team1.penality > 0 ? `+${team1.penality}` : team1.penality}</span>
+                <span class="war-penal">
+                  {team1.penality > 0 ? `+${team1.penality}` : team1.penality}
                 </span>
               ) : null}
-            </span>
-          </span>
-        </div>
+            </div>
+          </div>
 
-        <!-- Team 2 -->
-        <div class="team">
-          <span class="info">
-            <span class={`score ${getScoreClass(team2, team1)}`}>
+          <!-- VS Divider -->
+          <div class="war-vs-badge">
+            <span>VS</span>
+          </div>
+
+          <!-- Team 2 -->
+          <div class={`war-team team-right ${getScoreClass(team2, team1)}`}>
+            <div class={`war-score ${getScoreClass(team2, team1)}`}>
               {team2.score}
               {team2.penality ? (
-                <span class="penal">
-                  <span>{team2.penality > 0 ? `+${team2.penality}` : team2.penality}</span>
+                <span class="war-penal">
+                  {team2.penality > 0 ? `+${team2.penality}` : team2.penality}
                 </span>
               ) : null}
-            </span>
-            <span class="tag">{team2.tag}</span>
-            <span class="name">{team2.name}</span>
-          </span>
-          {team2.logo && <img src={team2.logo} alt={team2.name} class="logo" loading="lazy" />}
-        </div>
-
-        <!-- War Table / Screenshot link -->
-        <div class="war-info">
-          {war.table_img ? (
-            <a
-              class="table"
-              href={war.table_img}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Ver captura de la tabla"
-              style="color: #fff; padding: 15px; display: inline-flex; align-items: center;"
-            >
-              <i class="ri-table-line" style="font-size: 18px;"></i>
-            </a>
-          ) : null}
+            </div>
+            <div class="war-team-info">
+              <span class="war-team-name">{team2.name}</span>
+              <span class="war-team-tag">{team2.tag}</span>
+            </div>
+            {team2.logo && <img src={team2.logo} alt={team2.name} class="war-team-logo" loading="lazy" />}
+          </div>
         </div>
       </div>
     );
   })}
+  <dialog class="war-table-modal" aria-label="Captura de la tabla">
+    <button type="button" class="war-table-modal-close" aria-label="Cerrar">&times;</button>
+    <img class="war-table-modal-img" src="" alt="Captura de la tabla" />
+  </dialog>
 </div>
+
+<script>
+  document.addEventListener('click', (event) => {
+    const openBtn = event.target.closest('.war-table-btn');
+    if (openBtn) {
+      const container = openBtn.closest('.war-table-container');
+      const modal = container?.querySelector('.war-table-modal');
+      const img = modal?.querySelector('.war-table-modal-img');
+      if (modal && img && !modal.open) {
+        img.setAttribute('src', openBtn.dataset.image || '');
+        modal.showModal();
+      }
+      return;
+    }
+
+    const closeBtn = event.target.closest('.war-table-modal-close');
+    if (closeBtn) {
+      closeBtn.closest('.war-table-modal')?.close();
+      return;
+    }
+
+    const modal = event.target.closest('.war-table-modal');
+    if (modal && event.target === modal) {
+      modal.close();
+    }
+  });
+</script>

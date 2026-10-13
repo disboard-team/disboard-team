@@ -10,16 +10,21 @@ const { name, tag, logo, mkc_profile } = Astro.props;
 ---
 
 <div class="team-card-inner">
-  <img src={logo} alt={name} loading="lazy" />
+  <div class="team-logo-wrap">
+    <img src={logo} alt={name} loading="lazy" />
+  </div>
   <div class="team-description">
-    <div class="flex flex-sb flex-ac">
-      <span class="team-name">{name}</span>
+    <div class="team-header-row">
+      <span class="team-name" title={name}>{name}</span>
       <span class="team-tag">{tag}</span>
     </div>
-    <div class="detail">
-      <div class="text-btn">
-        <a href={mkc_profile} target="_blank" rel="noopener noreferrer">MKC</a>
+    {mkc_profile && (
+      <div class="team-action">
+        <a href={mkc_profile} target="_blank" rel="noopener noreferrer" class="team-mkc-link">
+          <span>MKC</span>
+          <i class="ri-arrow-right-s-line"></i>
+        </a>
       </div>
-    </div>
+    )}
   </div>
 </div>

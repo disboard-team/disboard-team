@@ -17,33 +17,41 @@ const { warsPlayed, avgScore, winLossRatio, mvps } = Astro.props;
   </div>
 
   <div class="player-score flex">
-    <div class="player-score-inner flex flex-sb">
-      <div class="stats-item flex">
-        <i class="ri-sword-line stats-icon"></i>
-        <div>
+    <div class="player-score-inner">
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-sword-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
           <div class="stats-label">Wars jugadas</div>
-          <div>{warsPlayed}</div>
+          <div class="stats-value">{warsPlayed}</div>
         </div>
       </div>
-      <div class="stats-item flex">
-        <i class="ri-heart-pulse-line stats-icon"></i>
-        <div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-heart-pulse-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
           <div class="stats-label">Media pts.</div>
-          <div>{avgScore}</div>
+          <div class="stats-value">{avgScore}</div>
         </div>
       </div>
-      <div class="stats-item flex">
-        <i class="ri-pie-chart-2-line stats-icon"></i>
-        <div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-pie-chart-2-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
           <div class="stats-label">Ratio V/D</div>
-          <div>{winLossRatio}</div>
+          <div class="stats-value">{winLossRatio}</div>
         </div>
       </div>
-      <div class="stats-item flex">
-        <i class="ri-star-line stats-icon"></i>
-        <div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-star-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
           <div class="stats-label">MVPs</div>
-          <div>{mvps}</div>
+          <div class="stats-value stats-value-highlight">{mvps}</div>
         </div>
       </div>
     </div>

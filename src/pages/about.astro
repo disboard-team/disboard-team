@@ -1,6 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
+
+const mandamientos = [
+  {
+    num: '01',
+    jp: '第一条',
+    title: 'Mandamiento 1',
+    text: 'El spam, insultos, burla, rage quit y cualquier otro comportamiento poco ético queda terminantemente prohibido.'
+  },
+  {
+    num: '02',
+    jp: '第二条',
+    title: 'Mandamiento 2',
+    text: 'Todos los conflictos entre usuarios se resolverán en privado o hablándolo con los representantes del clan.'
+  },
+  {
+    num: '03',
+    jp: '第三条',
+    title: 'Mandamiento 3',
+    text: 'Según el grado de incumplimiento de las normas, los líderes decidirán el seguimiento o no del jugador en el clan.'
+  },
+  {
+    num: '04',
+    jp: '第四条',
+    title: 'Mandamiento 4',
+    text: 'Siempre y cuando no se infrinja el tercer mandamiento, uno puede quedarse tranquilo.'
+  },
+  {
+    num: '09',
+    jp: '第九条',
+    title: 'Mandamiento 9',
+    text: 'En nombre de los dioses antiguos, los anteriores mandamientos no se pueden cambiar bajo ninguna circunstancia.'
+  },
+  {
+    num: '10',
+    jp: '第十条',
+    title: 'Mandamiento 10',
+    text: '¡No olvidéis pasarlo bien con los demás!'
+  }
+];
 ---
 
 <Layout
@@ -16,38 +55,32 @@ import SectionTitle from '../components/SectionTitle.astro';
         </h3>
       </div>
       <div class="detail">
-        <div class="mandamientos">
-          <h3>Mandamiento 1</h3>
-          <p>
-            El spam, insultos, burla, rq y cualquier otro comportamiento poco ético queda terminantemente prohibido.
-          </p>
+        <p class="about-lead">
+          Inspirados en los diez mandamientos («十の盟約» Juu no Meiyaku) del mundo de Disboard en No Game No Life, estas son las directrices y filosofía que rigen a nuestro clan en Mario Kart 8 Deluxe:
+        </p>
 
-          <h3>Mandamiento 2</h3>
-          <p>
-            Todos los conflictos entre usuarios se resolverán en privado o hablándolo con los representantes del clan.
-          </p>
+        <div class="mandamientos-list">
+          {mandamientos.map((m, idx) => (
+            <>
+              {idx === 4 && (
+                <div class="mandamiento-ellipsis">
+                  <span>[ ... ]</span>
+                </div>
+              )}
+              <div class="mandamiento-card">
+                <div class="mandamiento-header">
+                  <span class="mandamiento-jp">{m.jp}</span>
+                  <span class="mandamiento-title">{m.title}</span>
+                </div>
+                <p class="mandamiento-text">{m.text}</p>
+              </div>
+            </>
+          ))}
+        </div>
 
-          <h3>Mandamiento 3</h3>
-          <p>
-            Según el grado de incumplimiento de las normas, los líderes decidirán el seguimiento o no del jugador en el clan.
-          </p>
-
-          <h3>Mandamiento 4</h3>
-          <p>
-            Siempre y cuando no se infrinja el tercer mandamiento, uno puede quedarse tranquilo.
-          </p>
-
-          <p>[ ... ]</p>
-
-          <h3>Mandamiento 9</h3>
-          <p>
-            En nombre de los dioses antiguos, los anteriores mandamientos no se pueden cambiar bajo ninguna circunstancia.
-          </p>
-
-          <h3>Mandamiento 10</h3>
-          <p>¡No olvidéis pasarlo bien con los demás!</p>
-
-          <p>(Adaptación de los mandamientos originales de la serie)</p>
+        <div class="mandamientos-note">
+          <i class="ri-information-line"></i>
+          <span>Adaptación de los mandamientos originales de la serie</span>
         </div>
       </div>
     </article>
