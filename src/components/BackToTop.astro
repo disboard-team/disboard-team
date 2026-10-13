@@ -1,0 +1,20 @@
+<div class="back-to-top" id="back-to-top" role="button" aria-label="Volver arriba">
+  <i class="ri-arrow-up-s-line"></i>
+</div>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  if (btn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>

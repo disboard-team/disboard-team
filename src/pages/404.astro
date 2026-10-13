@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
+<Layout
+  title="『 Disboard 』 / 404 No encontrado"
+  description="Página no encontrada"
+>
+  <section class="contents">
+    <SectionTitle title="404" alt="エラー" />
+    <article>
+      <div class="heading">
+        <h3>
+          <span>Página no encontrada</span>
+        </h3>
+      </div>
+      <div class="detail" style="text-align: center; padding: 40px 0;">
+        <p style="text-align: center;">La página a la que intentas acceder no existe o ha sido movida.</p>
+        <div class="text-btn" style="margin-top: 30px;">
+          <a href="/">Volver al inicio</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>

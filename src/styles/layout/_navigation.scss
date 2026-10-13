@@ -1,0 +1,40 @@
+.war-container {
+  background-color: $container-background;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 20px;
+}
+
+.filter-block {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.filter-label {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.filter-tab-block {
+  display: flex;
+  flex-flow: row wrap;
+  .btn-tab-filter {
+    color: #fff;
+    font-weight: 300;
+    background-color: $bg-color-tables;
+    padding: 4px 8px;
+    transition: .3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: $bg-color-tables-hovered;
+      cursor: pointer;
+    }
+    &.active {
+      background-color: $bg-color-tables-hovered;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.wars-left {
+  float: left;
+}
+
+.wars-right {
+  float: right;
+  padding-left: 10px;
+}
+
+.team-block {
+  color: #fff;
+  padding: 0;
+  .heading {
+    margin: 0 0 10px !important;
+  }
+}
+.team-description > div.flex.flex-sb.flex-ac {
+  flex-wrap: nowrap !important;
+}
+
+.outer-team-list {
+  background-color: $container-background;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.team-card-inner {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+
+  img {
+    height: 72px;
+    width: 72px;
+  }
+  .team-description {
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: $bg-color-tables;
+    width: 100%;
+  }
+  .team-name {
+    position: relative;
+    margin-right: 20px;
+  }
+  .team-tag {
+    font-size: 12px;
+    font-weight: 200;
+    background-color: $bg-color-tables;
+    padding: 5px;
+  }
+  .detail {
+    margin-bottom: 0 !important;
+    .text-btn a {
+      width: 90px;
+      margin: 0 auto;
+      padding: 0 0;
+      margin-top: 10px;
+      float: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .wars-left {
+    float: none;
+    width: 100%;
+  }
+  
+  .wars-right {
+    float: none;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .player-profile {
+    display: flex;
+    width: calc(60% - 5px);
+    margin-right: 10px;
+  }
+  .player-stats {
+    display: flex;
+    width: calc(40% - 5px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .player-profile {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+  }
+  .player-stats {
+    display: flex;
+    width: 100%;
+  }
+  .player-profile-war-table {
+    width: 100%;
+  }
+}

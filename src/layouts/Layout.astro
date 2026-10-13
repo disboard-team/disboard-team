@@ -1,0 +1,68 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+
+import '@fontsource-variable/raleway';
+import '@fontsource/pt-serif/400.css';
+import '@fontsource/pt-serif/700.css';
+import 'flag-icons/css/flag-icons.min.css';
+import 'remixicon/fonts/remixicon.css';
+import '../styles/main.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = '『 Disboard 』 / Equipo competitivo',
+  description = 'Equipo competitivo',
+  image = '/images/ngnl_ico2.png'
+} = Astro.props;
+
+const isNetlifyProduction =
+  (process.env.NETLIFY === 'true' && process.env.CONTEXT === 'production');
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#050707" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Umami Analytics (Only on Netlify Production) -->
+    {isNetlifyProduction && (
+      <script
+        defer
+        src="/umami.js"
+        data-website-id="c045ac96-e5d0-4d8c-b4ed-28a8dad95c0e"
+        data-host-url="https://umami.qu4k3.com"
+      ></script>
+    )}
+  </head>
+  <body>
+    <div id="wrapper">
+      <Header />
+      <main id="main" class="main">
+        <slot />
+      </main>
+      <Footer />
+      <BackToTop />
+    </div>
+  </body>
+</html>

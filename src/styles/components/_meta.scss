@@ -1,0 +1,56 @@
+.table-meta-container { 
+  background-color: rgba(17, 17, 17, 0.6);
+  padding: 0px 10px 0px 10px;
+}
+
+.upper-table {
+color: #fff;
+font-weight: 300;
+font-size: 14px;
+width: 100%;
+padding: 10px 0;
+
+.filter-options {
+  color: #DBDBDB;
+  margin-right: 20px;
+  position: relative;
+  .option-icon {
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    font-size: 13px;
+    width: 20px;
+    &:hover {
+      background-color: $bg-color-tables-hovered;
+      cursor: pointer;
+    }      
+  }
+  &:nth-child(1):before {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  
+}
+.filter-table-info {
+  color: #DBDBDB;
+}
+}
+
+@media only screen and (max-width: 550px) {
+.filter-table-info {
+  display: none !important;
+}
+}

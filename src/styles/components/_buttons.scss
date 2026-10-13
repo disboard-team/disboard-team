@@ -1,0 +1,52 @@
+.text-btn {
+  position: relative;
+}
+
+.text-btn a:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -ms-transform: translate(0, -50%) rotate(45deg);
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .text-btn a:after {
+    content: "";
+    width: 2%;
+    padding: 2% 0 0;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    -ms-transform: translate(0, -50%) rotate(45deg);
+    transform: translate(0, -50%) rotate(45deg);
+  }
+}
+
+.detail .text-btn {
+  margin: 0 auto;
+}
+
+.detail .text-btn a {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: rgba(191,19,117,.6);
+  position: relative;
+  transition: .3s;
+
+  &:hover {
+    background-color: $bg-color-elements-hovered;
+  }
+}

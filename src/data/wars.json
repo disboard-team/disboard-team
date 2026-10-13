@@ -1,0 +1,262 @@
+[
+  {
+    "war_id": "f40c7ayH",
+    "played_at": "2018-09-14",
+    "game": {
+      "name": "MK8D",
+      "mode": "150cc"
+    },
+    "type": "friendly",
+    "modality": "6v6",
+    "table_img": "/images/tables/Screen_Shot_2018-09-14_at_4.28.35_PM.png",
+    "teams": [
+      {
+        "team_id": "VduORcqP",
+        "name": "Disboard",
+        "tag": "『 』",
+        "logo": "/images/teams/db.png",
+        "score": 459,
+        "penality": 0,
+        "is_winner": false,
+        "players": [
+          {
+            "player_id": "h15sqI4D",
+            "player_name": "Caizer",
+            "score": 114
+          },
+          {
+            "player_id": "HGrleDu9",
+            "player_name": "Yiyo",
+            "score": 112
+          },
+          {
+            "player_id": "mattex",
+            "player_name": "Mattex",
+            "score": 67
+          },
+          {
+            "player_id": "little",
+            "player_name": "Little",
+            "score": 66
+          },
+          {
+            "player_id": "roger",
+            "player_name": "Roger",
+            "score": 60
+          },
+          {
+            "player_id": "shoelic",
+            "player_name": "Shoelic",
+            "score": 40
+          }
+        ]
+      },
+      {
+        "team_id": "pmKVceyy",
+        "name": "Team Rocket",
+        "tag": "TR",
+        "logo": "/images/teams/tr.png",
+        "score": 525,
+        "penality": 0,
+        "is_winner": true,
+        "players": [
+          {
+            "player_id": "juanra",
+            "player_name": "Juanra",
+            "score": 125
+          },
+          {
+            "player_id": "meraky",
+            "player_name": "Meraky",
+            "score": 104
+          },
+          {
+            "player_id": "bokeron",
+            "player_name": "Bokeron",
+            "score": 81
+          },
+          {
+            "player_id": "unai",
+            "player_name": "Unai",
+            "score": 79
+          },
+          {
+            "player_id": "ZvpuUhC9",
+            "player_name": "Manster",
+            "score": 70
+          },
+          {
+            "player_id": "vizen",
+            "player_name": "Vizen",
+            "score": 66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "war_id": "maY03OKk",
+    "played_at": "2018-09-10",
+    "game": {
+      "name": "MK8D",
+      "mode": "150cc"
+    },
+    "type": "friendly",
+    "modality": "4v4",
+    "table_img": "/images/tables/Screen_Shot_2018-09-10_at_3.43.18_PM.png",
+    "teams": [
+      {
+        "team_id": "VduORcqP",
+        "name": "Disboard",
+        "tag": "『 』",
+        "logo": "/images/teams/db.png",
+        "score": 276,
+        "penality": 0,
+        "is_winner": true,
+        "players": [
+          {
+            "player_id": "h15sqI4D",
+            "player_name": "Caizer",
+            "score": 79
+          },
+          {
+            "player_id": "HGrleDu9",
+            "player_name": "Yiyo",
+            "score": 79
+          },
+          {
+            "player_id": "roger",
+            "player_name": "Roger",
+            "score": 60
+          },
+          {
+            "player_id": "little",
+            "player_name": "Little",
+            "score": 58
+          }
+        ]
+      },
+      {
+        "team_id": "BVmZtYix",
+        "name": "Horizon",
+        "tag": "Hž",
+        "logo": "https://www.mariokartcentral.com/mkc/storage/team_logos/3dVYO66BBjWFsVs4LjZ2DjqrrM8zxaXIADzwpnKR.jpeg",
+        "score": 192,
+        "penality": 0,
+        "is_winner": false,
+        "players": [
+          {
+            "player_id": "rhys",
+            "player_name": "Rhys",
+            "score": 60
+          },
+          {
+            "player_id": "plat",
+            "player_name": "Plat",
+            "score": 50
+          },
+          {
+            "player_id": "coco",
+            "player_name": "Coco",
+            "score": 43
+          },
+          {
+            "player_id": "yoshi",
+            "player_name": "Yoshi",
+            "score": 39
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "war_id": "Lh2EszSQ",
+    "played_at": "2018-09-15",
+    "game": {
+      "name": "MK8D",
+      "mode": "150cc"
+    },
+    "type": "friendly",
+    "modality": "6v5",
+    "table_img": "/images/tables/Screen_Shot_2018-09-15_at_2.07.00_PM.png",
+    "teams": [
+      {
+        "team_id": "VduORcqP",
+        "name": "Disboard",
+        "tag": "『 』",
+        "logo": "/images/teams/db.png",
+        "score": 339,
+        "penality": 0,
+        "is_winner": false,
+        "players": [
+          {
+            "player_id": "h15sqI4D",
+            "player_name": "Caizer",
+            "score": 90
+          },
+          {
+            "player_id": "jupex",
+            "player_name": "Jupex",
+            "score": 85
+          },
+          {
+            "player_id": "alexgp2",
+            "player_name": "AlexGP2",
+            "score": 71
+          },
+          {
+            "player_id": "Uy2sZ5ef",
+            "player_name": "Quake",
+            "score": 25
+          },
+          {
+            "player_id": "HGrleDu9",
+            "player_name": "Yiyo",
+            "score": 25
+          },
+          {
+            "player_id": "cats",
+            "player_name": "Cats",
+            "score": 44
+          }
+        ]
+      },
+      {
+        "team_id": "tgosAD1E",
+        "name": "Inflow",
+        "tag": "|ƒ",
+        "logo": "https://www.mariokartcentral.com/mkc/storage/team_logos/NAVdH4Ue2B2nP7pSgqK0YzE9WmiZLDixRRa2p17E.png",
+        "score": 357,
+        "penality": 0,
+        "is_winner": true,
+        "players": [
+          {
+            "player_id": "barn",
+            "player_name": "Barn",
+            "score": 91
+          },
+          {
+            "player_id": "joel",
+            "player_name": "Joel",
+            "score": 83
+          },
+          {
+            "player_id": "spec",
+            "player_name": "Spec",
+            "score": 79
+          },
+          {
+            "player_id": "jerry",
+            "player_name": "Jerry",
+            "score": 64
+          },
+          {
+            "player_id": "mees",
+            "player_name": "Mees",
+            "score": 43
+          }
+        ]
+      }
+    ]
+  }
+]

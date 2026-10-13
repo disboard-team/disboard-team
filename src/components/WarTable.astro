@@ -1,0 +1,96 @@
+---
+interface WarItem {
+  war_id: string;
+  played_at: string;
+  game?: { name: string; mode: string };
+  type?: string;
+  modality?: string;
+  table_img?: string;
+  teams: Array<{
+    name: string;
+    tag: string;
+    logo?: string;
+    score: number;
+    penality?: number;
+    is_winner?: boolean;
+    players?: Array<{ player_id?: string; player_name?: string; score: number }>;
+  }>;
+}
+
+interface Props {
+  wars: WarItem[];
+}
+
+const { wars } = Astro.props;
+---
+
+<div class="flex war-table-container">
+  {wars.length === 0 && (
+    <div style="color: #fff; padding: 20px;">No hay wars registradas.</div>
+  )}
+
+  {wars.map((war) => {
+    const team1 = war.teams[0] || { name: 'Unknown', tag: '?', score: 0 };
+    const team2 = war.teams[1] || { name: 'Unknown', tag: '?', score: 0 };
+
+    const getScoreClass = (tMain: typeof team1, tOpponent: typeof team1) => {
+      if (tMain.score > tOpponent.score) return 'win';
+      if (tMain.score < tOpponent.score) return 'lose';
+      return 'draw';
+    };
+
+    return (
+      <div class="war" data-type={war.type} data-modality={war.modality}>
+        <!-- Team 1 -->
+        <div class="team">
+          {team1.logo && <img src={team1.logo} alt={team1.name} class="logo" loading="lazy" />}
+          <span class="info">
+            <span class="name">{team1.name}</span>
+            <span class="tag">{team1.tag}</span>
+            <span class={`score ${getScoreClass(team1, team2)}`}>
+              {team1.score}
+              {team1.penality ? (
+                <span class="penal">
+                  <span>{team1.penality > 0 ? `+${team1.penality}` : team1.penality}</span>
+                </span>
+              ) : null}
+            </span>
+          </span>
+        </div>
+
+        <!-- Team 2 -->
+        <div class="team">
+          <span class="info">
+            <span class={`score ${getScoreClass(team2, team1)}`}>
+              {team2.score}
+              {team2.penality ? (
+                <span class="penal">
+                  <span>{team2.penality > 0 ? `+${team2.penality}` : team2.penality}</span>
+                </span>
+              ) : null}
+            </span>
+            <span class="tag">{team2.tag}</span>
+            <span class="name">{team2.name}</span>
+          </span>
+          {team2.logo && <img src={team2.logo} alt={team2.name} class="logo" loading="lazy" />}
+        </div>
+
+        <!-- War Table / Screenshot link -->
+        <div class="war-info">
+          {war.table_img ? (
+            <a
+              class="table"
+              href={war.table_img}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ver captura de la tabla"
+              style="color: #fff; padding: 15px; display: inline-flex; align-items: center;"
+            >
+              <i class="ri-table-line" style="font-size: 18px;"></i>
+            </a>
+          ) : null}
+        </div>
+      </div>
+    );
+  })}
+</div>

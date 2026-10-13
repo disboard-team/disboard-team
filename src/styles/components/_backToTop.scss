@@ -1,0 +1,22 @@
+.back-to-top {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  z-index: 3;
+  height: 50px;
+  width: 50px;
+  background-color: $bg-color-elements;
+  i, svg {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

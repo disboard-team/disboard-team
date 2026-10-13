@@ -1,0 +1,25 @@
+---
+interface Props {
+  totalCount: number;
+}
+
+const { totalCount } = Astro.props;
+---
+
+<div class="flex table-meta-container">
+  <div class="upper-table flex flex-sb">
+    <div class="flex flex-ac">
+      <div class="flex flex-ac filter-options" id="sort-trigger" role="button" tabindex="0">
+        <i class="ri-sort-desc option-icon"></i>
+        Ordenar
+      </div>
+      <div class="flex flex-ac filter-options">
+        <i class="ri-filter-3-line option-icon"></i>
+        Filtro
+      </div>
+    </div>
+    <div class="filter-table-info flex" id="filter-table-info">
+      Mostrando <span id="visible-count">{totalCount}</span> de {totalCount} resultados
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+---
+import GlobalNav from './GlobalNav.astro';
+import SocialNav from './SocialNav.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer id="footer">
+  <div class="inner">
+    <GlobalNav />
+    <SocialNav idPrefix="footer" />
+    <p class="copyright">©2018-{year}／<br class="sp_b" />Disboard.team</p>
+  </div>
+</footer>

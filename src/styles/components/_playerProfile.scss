@@ -1,0 +1,168 @@
+.player-container {
+  align-content: stretch;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  &.f-vertical {
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+  &.flex-sb {
+    justify-content: space-between;
+  }
+}
+
+
+.player-stats {
+  color: #fff;
+  padding: 0;
+  .heading {
+    margin: 0 0 10px !important;
+  }
+}
+
+.player-score {
+  background-color: $container-background;
+  padding: 10px;
+  .player-score-inner {
+    background-color: $bg-color-tables;
+    padding: 10px;
+    width: 100%;
+  }
+  .stats-icon {
+    font-size: 30px;
+    margin-right: 10px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .stats-label {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .stats-item {
+    width: 50%;
+  }
+  .stats-item:nth-child(-n+2) {
+    margin-bottom: 20px;
+  }
+}
+
+.player-profile {
+  background-color: $container-background;
+  padding: 10px;
+  img {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    background-color: $bg-color-tables;
+    margin-right: 10px;
+  }
+  .player-description {
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: $bg-color-tables;
+    width: 100%;
+
+    .flag-icon,
+    .fi {
+      margin-right: 10px;
+    }
+
+    .player-name {
+      position: relative;
+      margin-right: 20px;
+      
+      &:before {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: -2px;
+        right: -10px;
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+      }
+    }
+    .player-tag {
+      font-size: 12px;
+      font-weight: 200;
+    }
+
+  }
+  .profile-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+
+    .text-btn {
+      margin: 0;
+
+      a {
+        width: auto;
+        min-width: 140px;
+        padding: 8px 24px 8px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .text-btn a {
+    width: 150px;
+    padding: 10px;
+  }
+}
+
+.player-profile-war-table {
+  width: 60%;
+}
+
+@media only screen and (min-width: 961px) {
+  .player-profile {
+    display: flex;
+    width: calc(60% - 5px); 
+    margin-right: 10px; 
+  }
+  .player-stats {
+    display: flex;
+    width: calc(40% - 5px);    
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .player-profile {
+    display: flex;
+    width: calc(60% - 5px); 
+    margin-right: 10px; 
+  }
+  .player-stats {
+    display: flex;
+    width: calc(40% - 5px);    
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .player-profile {
+    display: flex;
+    width: 100%; 
+    margin-right: 0; 
+  }
+  .player-stats {
+    display: flex;
+    width: 100%;    
+  }
+  .player-profile-war-table {
+    width: 100%;
+  }
+}

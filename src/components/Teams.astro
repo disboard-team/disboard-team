@@ -1,0 +1,26 @@
+---
+import TeamCard from './TeamCard.astro';
+import teams from '../data/teams.json';
+
+const opposingTeams = teams.filter(
+  (team) => team.team_name !== 'Disboard' && team.team_id !== 'VduORcqP'
+);
+---
+
+<div class="team-block flex f-vertical">
+  <div class="heading">
+    <h3>
+      <span>Equipos enfrentados</span>
+    </h3>
+  </div>
+  <div class="outer-team-list">
+    {opposingTeams.map((team) => (
+      <TeamCard
+        name={team.team_name}
+        tag={team.team_tag}
+        logo={team.team_logo}
+        mkc_profile={team.mkc_team_profile}
+      />
+    ))}
+  </div>
+</div>

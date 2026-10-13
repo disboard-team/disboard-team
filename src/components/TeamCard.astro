@@ -1,0 +1,25 @@
+---
+interface Props {
+  name: string;
+  tag: string;
+  logo: string;
+  mkc_profile: string;
+}
+
+const { name, tag, logo, mkc_profile } = Astro.props;
+---
+
+<div class="team-card-inner">
+  <img src={logo} alt={name} loading="lazy" />
+  <div class="team-description">
+    <div class="flex flex-sb flex-ac">
+      <span class="team-name">{name}</span>
+      <span class="team-tag">{tag}</span>
+    </div>
+    <div class="detail">
+      <div class="text-btn">
+        <a href={mkc_profile} target="_blank" rel="noopener noreferrer">MKC</a>
+      </div>
+    </div>
+  </div>
+</div>
