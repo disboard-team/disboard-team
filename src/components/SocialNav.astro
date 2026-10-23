@@ -1,0 +1,31 @@
+---
+interface Props {
+  idPrefix?: string;
+}
+
+const { idPrefix = 'social' } = Astro.props;
+const tooltipId = `${idPrefix}-discord-tooltip`;
+---
+
+<nav class="social-navi">
+  <ul>
+    <li>
+      <a class="twitter" href="https://twitter.com/DisboardTeam" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i class="ri-twitter-fill"></i>
+      </a>
+    </li>
+    <li class="has-tooltip">
+      <a
+        class="discord"
+        href="#"
+        aria-label="Discord"
+        aria-describedby={tooltipId}
+        aria-disabled="true"
+        tabindex="-1"
+      >
+        <i class="ri-discord-fill"></i>
+      </a>
+      <span class="tooltip" id={tooltipId} role="tooltip">No se aceptan nuevos jugadores</span>
+    </li>
+  </ul>
+</nav>

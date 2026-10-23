@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import PlayerStats from '../../components/PlayerStats.astro';
+import WarTable from '../../components/WarTable.astro';
+import ObfuscatedSwitchFc from '../../components/ObfuscatedSwitchFc.astro';
+import players from '../../data/players.json';
+import wars from '../../data/wars.json';
+import { getPlayerStats, getPlayerWars } from '../../utils/stats.js';
+
+export function getStaticPaths() {
+  return players.map((player) => ({
+    params: { id: player.player_id },
+    props: { player },
+  }));
+}
+
+const { player } = Astro.props;
+const stats = getPlayerStats(player.player_id, wars);
+const playerWars = getPlayerWars(player.player_id, wars);
+---
+
+<Layout
+  title={`『 Disboard 』 / ${player.player_name}`}
+  description={`Perfil y estadísticas competitivas de ${player.player_name} en Mario Kart 8 Deluxe`}
+  image={player.discord_avatar_url}
+>
+  <section class="contents">
+    <SectionTitle title={`${player.player_name}'s Profile`} alt="選手たち" />
+    <article>
+      <div class="detail flex player-container">
+        <!-- Player card info -->
+        <div class="player-profile">
+          <img src={player.discord_avatar_url || 'https://cdn.discordapp.com/embed/avatars/0.png'} alt={player.player_name} loading="lazy" />
+          <div class="player-description">
+            <div>
+              <span class={`fi fi-${(player.country?.code || 'es').toLowerCase()} fis`}></span>
+              <span class="player-name">{player.player_name}</span>
+              {player.player_tag && <span class="player-tag">{player.player_tag}</span>}
+            </div>
+            <div class="flex flex-sb">
+              <div class="flex f-vertical mr-20">
+                <span class="player-in">
+                  <span class="has-tooltip">
+                    <i class="ri-user-add-line" aria-label="Miembro desde" tabindex="0"></i>
+                    <span class="tooltip" role="tooltip">Miembro desde</span>
+                  </span>
+                  {player.player_registry?.in || '2018-09-06'}
+                </span>
+                {player.switch_fc && (
+                  <span class="player-fc">Switch FC: <ObfuscatedSwitchFc code={player.switch_fc} /></span>
+                )}
+              </div>
+              <div class="profile-buttons">
+                {player.mkcentral_player_profile && (
+                  <div class="text-btn">
+                    <a href={player.mkcentral_player_profile} target="_blank" rel="noopener noreferrer">
+                      Perfil de MKCentral
+                    </a>
+                  </div>
+                )}
+                {player.mkc_player_profile && (
+                  <div class="text-btn">
+                    <a href={player.mkc_player_profile} target="_blank" rel="noopener noreferrer">
+                      Perfil de MKC (Legacy)
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player stats -->
+        <PlayerStats
+          warsPlayed={stats.warsPlayed}
+          avgScore={stats.avgScore}
+          winLossRatio={stats.winLossRatio}
+          mvps={stats.mvps}
+        />
+      </div>
+
+      <!-- Player wars -->
+      <div class="player-profile-war-table">
+        <div class="heading">
+          <h3>
+            <span>Wars recientes</span>
+          </h3>
+        </div>
+        <WarTable wars={playerWars} />
+      </div>
+    </article>
+  </section>
+</Layout>

@@ -1,0 +1,23 @@
+body::-webkit-scrollbar,
+.outer-team-list::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+body::-webkit-scrollbar-track,
+.outer-team-list::-webkit-scrollbar-track {
+  background: #080a10;
+}
+
+body::-webkit-scrollbar-thumb,
+.outer-team-list::-webkit-scrollbar-thumb {
+  background: rgba(191, 19, 117, 0.6);
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.outer-team-list::-webkit-scrollbar-thumb:hover {
+  background: $primary-light;
+  box-shadow: 0 0 6px $primary-glow;
+}

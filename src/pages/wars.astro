@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import WarTable from '../components/WarTable.astro';
+import WarTableMeta from '../components/WarTableMeta.astro';
+import Teams from '../components/Teams.astro';
+import wars from '../data/wars.json';
+
+const totalWars = wars.length;
+---
+
+<Layout
+  title="『 Disboard 』 / Wars"
+  description="Historial de enfrentamientos y wars de Disboard"
+>
+  <section class="contents">
+    <SectionTitle title="WARS" alt="戦争" />
+    <article>
+      <div class="w70 wars-left clearfix">
+        <div class="detail flex flex-sb war-container">
+          <!-- Modality filter -->
+          <div class="filter-block">
+            <div class="filter-label">Modalidad</div>
+            <div class="filter-tab-block" id="modality-filters">
+              <span class="btn-tab-filter active" data-modality="all">Cualquiera</span>
+              <span class="btn-tab-filter" data-modality="3v3">3v3</span>
+              <span class="btn-tab-filter" data-modality="4v4">4v4</span>
+              <span class="btn-tab-filter" data-modality="5v5">5v5</span>
+              <span class="btn-tab-filter" data-modality="6v6">6v6</span>
+            </div>
+          </div>
+          <!-- Match type filter -->
+          <div class="filter-block">
+            <div class="filter-label">Encuentro</div>
+            <div class="filter-tab-block" id="type-filters">
+              <span class="btn-tab-filter active" data-type="all">Cualquiera</span>
+              <span class="btn-tab-filter" data-type="friendly">Friendly</span>
+              <span class="btn-tab-filter" data-type="interno">Interno</span>
+              <span class="btn-tab-filter" data-type="competitivo">Competitivo</span>
+            </div>
+          </div>
+        </div>
+
+        <WarTableMeta totalCount={totalWars} />
+        <WarTable wars={wars} />
+      </div>
+
+      <div class="w30 wars-right clearfix">
+        <Teams />
+      </div>
+      <div class="clearfix"></div>
+    </article>
+  </section>
+</Layout>
+
+<script>
+  let currentModality = 'all';
+  let currentType = 'all';
+
+  const modalityButtons = document.querySelectorAll('#modality-filters .btn-tab-filter');
+  const typeButtons = document.querySelectorAll('#type-filters .btn-tab-filter');
+  const warElements = document.querySelectorAll<HTMLElement>('.war-table-container .war');
+  const visibleCountEl = document.getElementById('visible-count');
+
+  function applyFilters() {
+    let count = 0;
+    warElements.forEach((el) => {
+      const elModality = el.getAttribute('data-modality') || '';
+      const elType = (el.getAttribute('data-type') || '').toLowerCase();
+
+      const modalityMatch = currentModality === 'all' || elModality === currentModality;
+      const typeMatch = currentType === 'all' || elType === currentType;
+
+      if (modalityMatch && typeMatch) {
+        el.style.display = 'inline-flex';
+        count++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+
+    if (visibleCountEl) {
+      visibleCountEl.textContent = count.toString();
+    }
+  }
+
+  modalityButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      modalityButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentModality = btn.getAttribute('data-modality') || 'all';
+      applyFilters();
+    });
+  });
+
+  typeButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      typeButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentType = btn.getAttribute('data-type') || 'all';
+      applyFilters();
+    });
+  });
+</script>

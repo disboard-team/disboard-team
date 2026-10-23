@@ -1,0 +1,28 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/wars', en: 'WARS', jp: '戦争' },
+  { href: '/players', en: 'JUGADORES', jp: '選手たち' },
+  { href: '/about', en: 'EQUIPO', jp: 'チーム' }
+];
+---
+
+<nav class="global-navi">
+  <ul>
+    {navItems.map((item) => {
+      const isActive = currentPath === item.href || currentPath.startsWith(item.href + '/');
+      return (
+        <li class={`li-${item.en.toLowerCase()} ${isActive ? 'current' : ''}`}>
+          <a href={item.href}>
+            <p>
+              {item.en}
+              <br />
+              <span>{item.jp}</span>
+            </p>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>

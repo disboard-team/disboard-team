@@ -1,0 +1,146 @@
+---
+import GlobalNav from './GlobalNav.astro';
+import SocialNav from './SocialNav.astro';
+---
+
+<header id="header">
+  <div class="inner">
+    <section class="logo">
+      <a href="/">
+        <img class="img-responsive" src="/images/disboard-logo-alt.svg" alt="Disboard logo" />
+      </a>
+    </section>
+
+    <div class="global-navi-trigger sp-b" id="menu-trigger" aria-label="Abrir menú" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <SocialNav idPrefix="header" />
+    <GlobalNav />
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <GlobalNav />
+  <SocialNav idPrefix="drawer" />
+</div>
+
+<script>
+  const trigger = document.getElementById('menu-trigger');
+  const drawer = document.getElementById('mobile-drawer');
+
+  if (trigger && drawer) {
+    trigger.addEventListener('click', () => {
+      drawer.classList.toggle('is-open');
+      trigger.classList.toggle('active');
+    });
+  }
+</script>
+
+<style>
+  #menu-trigger {
+    cursor: pointer;
+  }
+
+  .mobile-drawer {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .mobile-drawer {
+      display: none;
+      background: rgba(5, 7, 7, 0.95);
+      border-top: 1px solid rgba(191, 19, 117, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+    .mobile-drawer.is-open {
+      display: block;
+    }
+    .mobile-drawer :global(.global-navi) {
+      display: block;
+      float: none;
+      margin: 0 0 20px 0;
+    }
+    .mobile-drawer :global(.global-navi ul) {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 0;
+    }
+    .mobile-drawer :global(.global-navi ul li) {
+      float: none;
+      margin: 0 !important;
+    }
+    .mobile-drawer :global(.global-navi a) {
+      color: #fff;
+      cursor: pointer;
+      display: block;
+    }
+    .mobile-drawer :global(.global-navi a p) {
+      color: #fff;
+      opacity: 0.65;
+    }
+    .mobile-drawer :global(.social-navi a) {
+      color: #fff;
+      cursor: pointer;
+    }
+    .mobile-drawer :global(.global-navi ul li:before) {
+      display: none !important;
+    }
+    .mobile-drawer :global(.social-navi) {
+      display: block;
+      float: none;
+      margin: 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    header :global(.social-navi) {
+      display: none;
+    }
+    .mobile-drawer :global(.global-navi ul li a:hover p) {
+      opacity: 1;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(191, 19, 117, 0.7);
+    }
+    .mobile-drawer :global(.global-navi ul li a:hover p span) {
+      color: #e62092;
+    }
+    .mobile-drawer :global(.global-navi ul li a[href]::after) {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #bf1375, #ff3399);
+      box-shadow: 0 0 8px rgba(255, 51, 153, 0.8);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-drawer :global(.global-navi ul li a[href]:hover::after) {
+      width: 100%;
+    }
+    .mobile-drawer :global(.global-navi ul li a[href]:hover p) {
+      opacity: 1;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(191, 19, 117, 0.7);
+    }
+    .mobile-drawer :global(.global-navi ul li a[href]:hover p span) {
+      color: #e62092;
+    }
+    .mobile-drawer :global(.global-navi ul .current a p) {
+      opacity: 1;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(191, 19, 117, 0.7);
+    }
+    .mobile-drawer :global(.global-navi ul .current a p span) {
+      color: #e62092;
+    }
+    .mobile-drawer :global(.global-navi ul .current a[href]::after) {
+      width: 100%;
+    }
+  }
+</style>

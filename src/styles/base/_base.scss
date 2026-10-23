@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+body {
+  margin: 0 auto;
+  font-family: $body-font;
+  font-size: $default-font-size;
+  line-height: 1.5;
+  background-color: #151515;
+  background: url('/images/bg_2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -2;
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+a {
+  outline: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+.clearfix:after,
+header .inner:after,
+header .inner .social-navi:after,
+header .inner .global-navi:after,
+.contents article:after,
+.parts-news .news-list:after,
+footer .inner:after,
+footer .inner .global-navi:after,
+footer .inner .social-navi:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.wrapper {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font;
+  font-weight: 400;
+}

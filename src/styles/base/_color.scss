@@ -1,0 +1,29 @@
+// Brand Colors (Disboard / No Game No Life inspired)
+$primary: #bf1375;
+$primary-light: #e62092;
+$primary-glow: rgba(191, 19, 117, 0.45);
+$primary-glow-bright: rgba(230, 32, 146, 0.65);
+$accent-cyan: #00d2ff;
+$accent-gold: #ffc107;
+
+// Dark Glassmorphism Surfaces
+$surface-ground: rgba(10, 11, 18, 0.85);
+$surface-container: rgba(16, 18, 28, 0.78);
+$surface-card: rgba(22, 25, 38, 0.82);
+$surface-card-hover: rgba(32, 36, 54, 0.92);
+
+// Borders & Accents
+$border-subtle: rgba(255, 255, 255, 0.08);
+$border-medium: rgba(255, 255, 255, 0.16);
+$border-accent: rgba(191, 19, 117, 0.55);
+
+// Legacy variable mappings for compatibility
+$background-color-alt-img: #151515;
+$background-color-overlay-content: rgba(10, 11, 18, 0.75);
+$container-background: $surface-container;
+
+$bg-color-tables: $surface-card;
+$bg-color-tables-hovered: $surface-card-hover;
+
+$bg-color-elements: rgba(191, 19, 117, 0.85);
+$bg-color-elements-hovered: rgba(230, 32, 146, 0.95);

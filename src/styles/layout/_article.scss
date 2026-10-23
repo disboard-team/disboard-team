@@ -1,0 +1,120 @@
+@media only screen and (min-width: 768px) {
+  .contents {
+    article {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+
+      .heading {
+        margin: 0 0 24px;
+        font-family: $title-font;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        h3 {
+          margin: 0;
+          font-size: $article-title;
+          color: #fff;
+          line-height: 1.5;
+          letter-spacing: 2px;
+
+          span {
+            padding: 5px 15px;
+            background: rgba(191, 19, 117, 0.6);
+          }
+        }
+
+        &::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          // background: linear-gradient(90deg, rgba(191, 19, 117, 0.6) 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+          background: rgba(191, 19, 117, 0.6);
+          margin-left: 18px;
+          margin-bottom: -3px;
+        }
+      }
+
+      .detail {
+        margin-bottom: 40px;
+
+        p {
+          font-size: $article-p;
+          color: #e2e8f0;
+          line-height: 1.875;
+          font-weight: 400;
+          text-align: justify;
+          margin: 0 0 15px;
+        }
+
+        &.flex-container {
+          display: flex;
+          flex-flow: row wrap;
+          align-content: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contents {
+    article {
+      width: 93.75%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+
+      .heading {
+        margin: 0 0 20px;
+        display: flex;
+        align-items: flex-end;
+
+        h3 {
+          margin: 0;
+          font-size: $article-title-mob;
+          color: #fff;
+          line-height: 1.6;
+
+          span {
+            padding: 5px 6px;
+            background: rgba(191, 19, 117, 0.6);
+          }
+        }
+
+        &::after {
+          content: "";
+          flex: 1;
+          height: 1px;
+          // background: linear-gradient(90deg, rgba(191, 19, 117, 0.5) 0%, transparent 100%);
+          background: rgba(191, 19, 117, 0.6);
+          margin-left: 12px;
+          margin-bottom: -3px;
+        }
+      }
+
+      .detail {
+        margin-bottom: 40px;
+
+        p {
+          font-size: $article-p-mob;
+          color: #e2e8f0;
+          line-height: 1.875;
+          font-weight: 400;
+          text-align: justify;
+          margin: 0 0 15px;
+        }
+
+        &.flex-container {
+          display: flex;
+          flex-flow: row wrap;
+          align-content: flex-start;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

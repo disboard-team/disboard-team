@@ -1,0 +1,59 @@
+---
+interface Props {
+  warsPlayed: number | string;
+  avgScore: string;
+  winLossRatio: string;
+  mvps: number | string;
+}
+
+const { warsPlayed, avgScore, winLossRatio, mvps } = Astro.props;
+---
+
+<div class="player-stats flex f-vertical">
+  <div class="heading">
+    <h3>
+      <span>Stats</span>
+    </h3>
+  </div>
+
+  <div class="player-score flex">
+    <div class="player-score-inner">
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-sword-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
+          <div class="stats-label">Wars jugadas</div>
+          <div class="stats-value">{warsPlayed}</div>
+        </div>
+      </div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-heart-pulse-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
+          <div class="stats-label">Media pts.</div>
+          <div class="stats-value">{avgScore}</div>
+        </div>
+      </div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-pie-chart-2-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
+          <div class="stats-label">Ratio V/D</div>
+          <div class="stats-value">{winLossRatio}</div>
+        </div>
+      </div>
+      <div class="stats-item">
+        <div class="stats-icon-wrap">
+          <i class="ri-star-line stats-icon"></i>
+        </div>
+        <div class="stats-data">
+          <div class="stats-label">MVPs</div>
+          <div class="stats-value stats-value-highlight">{mvps}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

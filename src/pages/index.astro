@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import PlayerCard from '../components/PlayerCard.astro';
+import WarTable from '../components/WarTable.astro';
+import Teams from '../components/Teams.astro';
+import players from '../data/players.json';
+import wars from '../data/wars.json';
+
+const staffMembers = players.filter((p) => p.is_staff);
+const recentWars = wars.slice(0, 3);
+---
+
+<Layout
+  title="『 Disboard 』 / Equipo competitivo de Mario Kart 8 Deluxe"
+  description="Equipo competitivo de Mario Kart 8 Deluxe"
+>
+  <section class="contents">
+    <SectionTitle title="DISBOARD TEAM" alt="ディスボード" />
+    <article>
+      <div class="heading">
+        <h3>
+          <img class="section-icon welcome-banner" src="/images/Bienvenido.png" alt="Bienvenido a Disboard" />
+          <span class="sr-only">Bienvenido a Disboard</span>
+        </h3>
+      </div>
+      <div class="detail">
+        <p>
+          Disboard es un clan y equipo competitivo de Mario Kart 8 Deluxe formado por jugadores que comparten la pasión por la competición, la constante mejora y el juego limpio. Inspirados en la filosofía de No Game No Life, creemos que cada carrera es una oportunidad para aprender, crecer y disfrutar del juego. Aquí no solo buscamos ganar: construimos una comunidad sólida, con compañerismo, respeto y ambición por superarse día a día.
+        </p>
+      </div>
+
+      <div class="heading">
+        <h3>
+          <span>Líderes</span>
+        </h3>
+      </div>
+      <div class="detail flex-container players-container">
+        {staffMembers.map((player) => (
+          <a class="player-card" href={`/player/${player.player_id}`}>
+            <PlayerCard
+              avatarURL={player.discord_avatar_url}
+              country={player.country.code}
+              name={player.player_name}
+              tag={player.player_tag}
+              inDate={player.player_registry.in}
+              fc={player.switch_fc}
+              role={player.player_registry?.role}
+            />
+          </a>
+        ))}
+      </div>
+
+      <div class="w70 wars-left clearfix" style="margin-top: 20px;">
+        <div class="heading">
+          <h3>
+            <span>Últimos Encuentros</span>
+          </h3>
+        </div>
+        <WarTable wars={recentWars} />
+        <div class="detail" style="margin-top: 20px;">
+          <div class="text-btn">
+            <a href="/wars">Ver todas las Wars</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w30 wars-right clearfix" style="margin-top: 20px;">
+        <Teams />
+      </div>
+      <div class="clearfix"></div>
+    </article>
+  </section>
+</Layout>

@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import PlayerCard from '../components/PlayerCard.astro';
+import players from '../data/players.json';
+
+const staffMembers = players.filter((p) => p.is_staff);
+const normalMembers = players.filter((p) => !p.is_staff);
+---
+
+<Layout
+  title="『 Disboard 』 / Miembros del equipo"
+  description="Miembros y Staff del equipo competitivo de Mario Kart 8 Deluxe"
+>
+  <section class="contents">
+    <SectionTitle title="JUGADORES" alt="選手たち" />
+    <article>
+      <div class="heading">
+        <h3>
+          <span>Staff</span>
+        </h3>
+      </div>
+      <div class="detail players-container">
+        {staffMembers.map((player) => (
+          <a class="player-card" href={`/player/${player.player_id}`}>
+            <PlayerCard
+              avatarURL={player.discord_avatar_url}
+              country={player.country.code}
+              name={player.player_name}
+              tag={player.player_tag}
+              inDate={player.player_registry.in}
+              fc={player.switch_fc}
+              role={player.player_registry?.role}
+            />
+          </a>
+        ))}
+      </div>
+
+      {normalMembers.length > 0 && (
+        <>
+          <div class="heading">
+            <h3>
+              <span>Miembros</span>
+            </h3>
+          </div>
+          <div class="detail players-container members">
+            {normalMembers.map((player) => (
+              <a class="player-card" href={`/player/${player.player_id}`}>
+                <PlayerCard
+                  avatarURL={player.discord_avatar_url}
+                  country={player.country.code}
+                  name={player.player_name}
+                  tag={player.player_tag}
+                  inDate={player.player_registry.in}
+                  fc={player.switch_fc}
+                  role={player.player_registry?.role}
+                />
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </article>
+  </section>
+</Layout>

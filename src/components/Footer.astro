@@ -1,0 +1,30 @@
+---
+import SocialNav from './SocialNav.astro';
+
+const year = new Date().getFullYear();
+
+const footerLinks = [
+  { label: 'DOCS', href: 'https://docs.disboard.team' },
+  { label: 'STATUS', href: 'https://status.disboard.team' },
+  { label: 'BOT', href: 'https://docs.disboard.team/bot' },
+  { label: 'GITHUB', href: 'https://github.com/disboard-team/' },
+];
+---
+
+<footer id="footer">
+  <div class="inner">
+    <p class="copyright">©2018-{year}／Disboard.team</p>
+    <nav class="global-navi" aria-label="Footer">
+      <ul>
+        {footerLinks.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="noopener noreferrer">
+              <p>{item.label}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <SocialNav idPrefix="footer" />
+  </div>
+</footer>

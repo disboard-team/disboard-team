@@ -1,0 +1,22 @@
+---
+interface Props {
+  code: string;
+}
+
+const { code } = Astro.props;
+const encodedCode = Buffer.from(code, 'utf8').toString('base64');
+---
+
+<span class="player-fc" data-switch-fc={encodedCode} aria-label="Código amigo de Switch"></span>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-switch-fc]').forEach((element) => {
+    if (element.textContent) return;
+
+    try {
+      element.textContent = atob(element.dataset.switchFc || '');
+    } catch {
+      element.textContent = 'No disponible';
+    }
+  });
+</script>

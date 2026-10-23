@@ -1,0 +1,63 @@
+.table-meta-container {
+  background: rgba(16, 18, 28, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.upper-table {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .filter-options {
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.875rem;
+
+    .option-icon {
+      margin-right: 6px;
+      padding: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 22px;
+      width: 22px;
+      font-size: 0.8125rem;
+      color: #fff;
+
+      &:hover {
+        background: $primary;
+        box-shadow: 0 0 6px $primary-glow;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .filter-table-info {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+
+    strong {
+      color: $primary-light;
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .filter-table-info {
+    display: none !important;
+  }
+}
