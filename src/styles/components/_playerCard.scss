@@ -179,3 +179,11 @@
     grid-template-columns: 1fr;
   }
 }
+.players-container.former .player-card {
+  opacity: 0.72;
+  filter: grayscale(0.35);
+}
+.players-container.former .player-card:hover {
+  opacity: 1;
+  filter: none;
+}

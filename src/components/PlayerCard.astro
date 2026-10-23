@@ -5,13 +5,14 @@ interface Props {
   name: string;
   tag?: string;
   inDate?: string;
+  outDate?: string | null;
   fc?: string | null;
   role?: string;
 }
 
 import ObfuscatedSwitchFc from './ObfuscatedSwitchFc.astro';
 
-const { avatarURL, country = 'es', name, tag, inDate, fc, role } = Astro.props;
+const { avatarURL, country = 'es', name, tag, inDate, outDate, fc, role } = Astro.props;
 const countryCode = (country || 'es').toLowerCase();
 const avatar = avatarURL || 'https://cdn.discordapp.com/embed/avatars/0.png';
 ---
@@ -38,6 +39,16 @@ const avatar = avatarURL || 'https://cdn.discordapp.com/embed/avatars/0.png';
           <span class="tooltip" role="tooltip">Miembro desde</span>
         </span>
         {inDate || '2018-09-06'}
+        {outDate && (
+          <>
+            {' '}
+            <span class="has-tooltip">
+              <i class="ri-user-unfollow-line" aria-label="Miembro hasta" tabindex="0"></i>
+              <span class="tooltip" role="tooltip">Miembro hasta</span>
+            </span>
+            {outDate}
+          </>
+        )}
       </span>
     </div>
     {fc && (

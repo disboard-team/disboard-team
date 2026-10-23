@@ -5,9 +5,10 @@ import PlayerCard from '../components/PlayerCard.astro';
 import WarTable from '../components/WarTable.astro';
 import Teams from '../components/Teams.astro';
 import players from '../data/players.json';
+import { getDiscordAvatarUrl } from '../utils/discord.js';
 import wars from '../data/wars.json';
 
-const staffMembers = players.filter((p) => p.is_staff);
+const staffMembers = players.filter((p) => p.is_staff && !p.player_registry?.out);
 const recentWars = wars.slice(0, 3);
 ---
 
@@ -39,7 +40,7 @@ const recentWars = wars.slice(0, 3);
         {staffMembers.map((player) => (
           <a class="player-card" href={`/player/${player.player_id}`}>
             <PlayerCard
-              avatarURL={player.discord_avatar_url}
+              avatarURL={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)}
               country={player.country.code}
               name={player.player_name}
               tag={player.player_tag}
