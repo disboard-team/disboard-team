@@ -3,40 +3,48 @@ import Layout from '../layouts/Layout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import PlayerCard from '../components/PlayerCard.astro';
 import players from '../data/players.json';
+import { getDiscordAvatarUrl } from '../utils/discord.js';
 
-const staffMembers = players.filter((p) => p.is_staff);
-const normalMembers = players.filter((p) => !p.is_staff);
+const isFormer = (p) => Boolean(p.player_registry?.out);
+const currentStaff = players.filter((p) => p.is_staff && !isFormer(p));
+const currentMembers = players.filter((p) => !p.is_staff && !isFormer(p));
+const formerMembers = players.filter((p) => isFormer(p));
 ---
 
 <Layout
   title="『 Disboard 』 / Miembros del equipo"
-  description="Miembros y Staff del equipo competitivo de Mario Kart 8 Deluxe"
+  description="Miembros y Staff de Disboard Team"
 >
   <section class="contents">
     <SectionTitle title="JUGADORES" alt="選手たち" />
     <article>
-      <div class="heading">
-        <h3>
-          <span>Staff</span>
-        </h3>
-      </div>
-      <div class="detail players-container">
-        {staffMembers.map((player) => (
-          <a class="player-card" href={`/player/${player.player_id}`}>
-            <PlayerCard
-              avatarURL={player.discord_avatar_url}
-              country={player.country.code}
-              name={player.player_name}
-              tag={player.player_tag}
-              inDate={player.player_registry.in}
-              fc={player.switch_fc}
-              role={player.player_registry?.role}
-            />
-          </a>
-        ))}
-      </div>
+      {currentStaff.length > 0 && (
+        <>
+          <div class="heading">
+            <h3>
+              <span>Staff</span>
+            </h3>
+          </div>
+          <div class="detail players-container">
+            {currentStaff.map((player) => (
+              <a class="player-card" href={`/player/${player.player_id}`}>
+                <PlayerCard
+                  avatarURL={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)}
+                  country={player.country.code}
+                  name={player.player_name}
+                  tag={player.player_tag}
+                  inDate={player.player_registry?.in}
+                  outDate={player.player_registry?.out}
+                  fc={player.switch_fc}
+                  role={player.player_registry?.role}
+                />
+              </a>
+            ))}
+          </div>
+        </>
+      )}
 
-      {normalMembers.length > 0 && (
+      {currentMembers.length > 0 && (
         <>
           <div class="heading">
             <h3>
@@ -44,14 +52,41 @@ const normalMembers = players.filter((p) => !p.is_staff);
             </h3>
           </div>
           <div class="detail players-container members">
-            {normalMembers.map((player) => (
+            {currentMembers.map((player) => (
               <a class="player-card" href={`/player/${player.player_id}`}>
                 <PlayerCard
-                  avatarURL={player.discord_avatar_url}
+                  avatarURL={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)}
                   country={player.country.code}
                   name={player.player_name}
                   tag={player.player_tag}
-                  inDate={player.player_registry.in}
+                  inDate={player.player_registry?.in}
+                  outDate={player.player_registry?.out}
+                  fc={player.switch_fc}
+                  role={player.player_registry?.role}
+                />
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      {formerMembers.length > 0 && (
+        <>
+          <div class="heading">
+            <h3>
+              <span>Ex-miembros</span>
+            </h3>
+          </div>
+          <div class="detail players-container former">
+            {formerMembers.map((player) => (
+              <a class="player-card" href={`/player/${player.player_id}`}>
+                <PlayerCard
+                  avatarURL={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)}
+                  country={player.country.code}
+                  name={player.player_name}
+                  tag={player.player_tag}
+                  inDate={player.player_registry?.in}
+                  outDate={player.player_registry?.out}
                   fc={player.switch_fc}
                   role={player.player_registry?.role}
                 />

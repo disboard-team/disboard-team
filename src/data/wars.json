@@ -20,12 +20,12 @@
         "is_winner": false,
         "players": [
           {
-            "player_id": "h15sqI4D",
+            "player_id": "caizer",
             "player_name": "Caizer",
             "score": 114
           },
           {
-            "player_id": "HGrleDu9",
+            "player_id": "yiyo",
             "player_name": "Yiyo",
             "score": 112
           },
@@ -81,7 +81,7 @@
             "score": 79
           },
           {
-            "player_id": "ZvpuUhC9",
+            "player_id": "manster",
             "player_name": "Manster",
             "score": 70
           },
@@ -115,12 +115,12 @@
         "is_winner": true,
         "players": [
           {
-            "player_id": "h15sqI4D",
+            "player_id": "caizer",
             "player_name": "Caizer",
             "score": 79
           },
           {
-            "player_id": "HGrleDu9",
+            "player_id": "yiyo",
             "player_name": "Yiyo",
             "score": 79
           },
@@ -190,7 +190,7 @@
         "is_winner": false,
         "players": [
           {
-            "player_id": "h15sqI4D",
+            "player_id": "caizer",
             "player_name": "Caizer",
             "score": 90
           },
@@ -205,12 +205,12 @@
             "score": 71
           },
           {
-            "player_id": "Uy2sZ5ef",
+            "player_id": "quake",
             "player_name": "Quake",
             "score": 25
           },
           {
-            "player_id": "HGrleDu9",
+            "player_id": "yiyo",
             "player_name": "Yiyo",
             "score": 25
           },

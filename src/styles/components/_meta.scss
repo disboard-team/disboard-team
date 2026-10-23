@@ -36,6 +36,7 @@
       width: 22px;
       font-size: 0.8125rem;
       color: #fff;
+      cursor: pointer;
 
       &:hover {
         background: $primary;
@@ -60,4 +61,7 @@
   .filter-table-info {
     display: none !important;
   }
+}
+#sort-trigger {
+  cursor: pointer;
 }

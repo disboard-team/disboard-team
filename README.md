@@ -1,5 +1,7 @@
 # Disboard Team
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7f149fce-dcd9-45d3-83f5-d8e794768a1e/deploy-status)](https://app.netlify.com/projects/disboard/deploys)
+
 Sitio web oficial y API pública para el clan y equipo competitivo de **Disboard Team**.
 
 Construido limpiamente con **Astro**, **Sass (.scss)**, **JavaScript vanilla** y datos versionados en **ficheros JSON** (generación estática pura / SSG sin React ni bases de datos externas).

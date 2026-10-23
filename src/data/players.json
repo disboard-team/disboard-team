@@ -1,6 +1,6 @@
 [
   {
-    "player_id": "ZvpuUhC9",
+    "player_id": "manster",
     "player_name": "Manster",
     "player_team": "Disboard",
     "player_tag": "Manster#6835",
@@ -21,15 +21,15 @@
           "role": "Imanity",
           "role_color": "#3498db"
         }
-      ]
+      ],
+      "avatar": "1c267e125dff0080b7b352721987504f"
     },
     "switch_fc": "1625-4418-1898",
     "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/710",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=710",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/1.png"
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=710"
   },
   {
-    "player_id": "55U86tVj",
+    "player_id": "aid3n",
     "player_name": "aid3n",
     "player_team": "Disboard",
     "player_tag": "aid3n#1617",
@@ -40,7 +40,7 @@
     },
     "player_registry": {
       "role": "Imanity",
-      "in": "2018-09-06",
+      "in": "2018-09-08",
       "out": null
     },
     "discord": {
@@ -50,15 +50,15 @@
           "role": "Imanity",
           "role_color": "#3498db"
         }
-      ]
+      ],
+      "avatar": "ee25cf8829dc43f1edc381e81ae58b2d"
     },
     "switch_fc": "1980-2628-6888",
     "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/372",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=372",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/3.png"
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=372"
   },
   {
-    "player_id": "WghMmftc",
+    "player_id": "gioseba",
     "player_name": "Gioseba",
     "player_team": "Disboard",
     "player_tag": "Gioseba#8698",
@@ -79,15 +79,15 @@
           "role": "Imanity",
           "role_color": "#3498db"
         }
-      ]
+      ],
+      "avatar": "1443b81dcef5f0d01002fe9652b17cbe"
     },
     "switch_fc": "7207-6024-9910",
     "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1074",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1074",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/2.png"
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1074"
   },
   {
-    "player_id": "h15sqI4D",
+    "player_id": "caizer",
     "player_name": "Caizer",
     "player_team": "Disboard",
     "player_tag": "Caizer#6911",
@@ -98,8 +98,8 @@
     },
     "player_registry": {
       "role": "Leader",
-      "in": "2018-09-06",
-      "out": null
+      "in": "2018-12-11",
+      "out": "2019-02-20"
     },
     "discord": {
       "unique_id": "402980360461221888",
@@ -120,15 +120,15 @@
           "role": "Imanity",
           "role_color": "#3498db"
         }
-      ]
+      ],
+      "avatar": "1671b04b9745b36ff4cd6f57cf53cc17"
     },
     "switch_fc": "6317-9462-5122",
-    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/players/312",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=312",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/3.png"
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/312",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=312"
   },
   {
-    "player_id": "Sfqd9EKt",
+    "player_id": "alozy",
     "player_name": "Alozy",
     "player_team": "Disboard",
     "player_tag": "Alozy#9947",
@@ -139,7 +139,7 @@
     },
     "player_registry": {
       "role": "Imanity",
-      "in": "2018-09-06",
+      "in": "2018-09-21",
       "out": null
     },
     "discord": {
@@ -149,15 +149,15 @@
           "role": "Imanity",
           "role_color": "#3498db"
         }
-      ]
+      ],
+      "avatar": "d5bbfbf10416b15985e8ca8ee1871d08"
     },
     "switch_fc": "2137-0550-3339",
     "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1084",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1084",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/1.png"
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1084"
   },
   {
-    "player_id": "LNH3u4bs",
+    "player_id": "prototipo",
     "player_name": "Prototipo",
     "player_team": "Disboard",
     "player_tag": "Prototipo#6840",
@@ -182,11 +182,10 @@
     },
     "switch_fc": null,
     "mkc_player_profile": null,
-    "mkcentral_player_profile": null,
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/1.png"
+    "mkcentral_player_profile": null
   },
   {
-    "player_id": "Uy2sZ5ef",
+    "player_id": "quake",
     "player_name": "Quake",
     "player_team": "Disboard",
     "player_tag": "Quake#1470",
@@ -223,12 +222,11 @@
       "avatar": "42eb44bf1a180198e9da1500c0276ab6"
     },
     "switch_fc": "6757-8638-3964",
-    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/players/10",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=10",
-    "discord_avatar_url": "https://cdn.discordapp.com/avatars/147882388347682816/42eb44bf1a180198e9da1500c0276ab6.png"
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/10",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=10"
   },
   {
-    "player_id": "HGrleDu9",
+    "player_id": "yiyo",
     "player_name": "Yiyo",
     "player_team": "Disboard",
     "player_tag": "Yiyo#1626",
@@ -239,7 +237,7 @@
     },
     "player_registry": {
       "role": "Imanity",
-      "in": "2018-09-06",
+      "in": "2018-12-14",
       "out": null
     },
     "discord": {
@@ -253,7 +251,514 @@
     },
     "switch_fc": "1465-7542-7900",
     "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/276",
-    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=276",
-    "discord_avatar_url": "https://cdn.discordapp.com/embed/avatars/3.png"
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=276"
+  },
+  {
+    "player_id": "joe k",
+    "player_name": "Joe K",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Estados Unidos",
+      "code": "us"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-13",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/40",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=40",
+    "discord": {
+      "unique_id": "299641211419885568",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "81753b5b8dba96fc91c8bb29d36b0acd"
+    }
+  },
+  {
+    "player_id": "cris",
+    "player_name": "Cris",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-12-11",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/130",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=130",
+    "discord": {
+      "unique_id": "467824888321933333",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "bae7b67096b219c869abd3e25fdda8ce"
+    }
+  },
+  {
+    "player_id": "mike",
+    "player_name": "Mike",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "España",
+      "code": "es"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-31",
+      "out": "2019-02-20"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/152",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=152"
+  },
+  {
+    "player_id": "roger",
+    "player_name": "Roger",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "España",
+      "code": "es"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-08",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/159",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=159",
+    "discord": {
+      "unique_id": "338427046839582721",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "854c3d3eb98bf2eb75db2271b4debdb2"
+    }
+  },
+  {
+    "player_id": "lurine03",
+    "player_name": "Lurine03",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-30",
+      "out": "2019-01-02"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/201",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=201"
+  },
+  {
+    "player_id": "brice turang",
+    "player_name": "Brice Turang",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Estados Unidos",
+      "code": "us"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-21",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/351",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=351"
+  },
+  {
+    "player_id": "axel11",
+    "player_name": "Axel11",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-12-05",
+      "out": "2019-01-01"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/386",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=386",
+    "discord": {
+      "unique_id": "412758868943437834",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "4826cd65b47c0d515e0a65ced182f61d"
+    }
+  },
+  {
+    "player_id": "yeyo",
+    "player_name": "YEYO",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-11-28",
+      "out": "2019-01-26"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/526",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=526"
+  },
+  {
+    "player_id": "scales",
+    "player_name": "Scales",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-02",
+      "out": "2019-02-27"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/544",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=544",
+    "discord": {
+      "unique_id": "400145736521482242",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "97ec8a5fd21b4fb117f385169a69087d"
+    }
+  },
+  {
+    "player_id": "eliam",
+    "player_name": "Eliam",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Chile",
+      "code": "cl"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-10",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/574",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=574"
+  },
+  {
+    "player_id": "roguee",
+    "player_name": "Roguee",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-12-04",
+      "out": "2019-01-01"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/653",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=653"
+  },
+  {
+    "player_id": "alex2004",
+    "player_name": "Alex2004",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "España",
+      "code": "es"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-21",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/776",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=776"
+  },
+  {
+    "player_id": "silver-damian-bones",
+    "player_name": "Silver/Damian/Bones",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Canadá",
+      "code": "ca"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-11-02",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/781",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=781"
+  },
+  {
+    "player_id": "zeta",
+    "player_name": "zeta",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Estados Unidos",
+      "code": "us"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-12-04",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/860",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=860",
+    "discord": {
+      "unique_id": "170657969820794881",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "d43585e190a61206931f235a91a5ec27"
+    }
+  },
+  {
+    "player_id": "lapulgaxd",
+    "player_name": "LaPulgaXD",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-11-02",
+      "out": "2019-03-28"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/886",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=886",
+    "discord": {
+      "unique_id": "354312574080385024",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "6cac37bbbb18ca8ad0a4fab2ec612b96"
+    }
+  },
+  {
+    "player_id": "peque",
+    "player_name": "Peque",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Argentina",
+      "code": "ar"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-21",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/888",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=888"
+  },
+  {
+    "player_id": "eletrn",
+    "player_name": "Eletrn",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "República Dominicana",
+      "code": "do"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-11-02",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/982",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=982",
+    "discord": {
+      "unique_id": "459499565666664470",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "8fef787bdc73e65543a780e0508e89e7"
+    }
+  },
+  {
+    "player_id": "znowa-ğş",
+    "player_name": "znowa / ğş",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Estados Unidos",
+      "code": "us"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-10",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/990",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=990"
+  },
+  {
+    "player_id": "kelss",
+    "player_name": "kelss",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Honduras",
+      "code": "hn"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2018-09-30",
+      "out": "2020-01-06"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1121",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1121"
+  },
+  {
+    "player_id": "riccio",
+    "player_name": "Riccio",
+    "player_team": "Disboard",
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "Italia",
+      "code": "it"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-12",
+      "out": null
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1392",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1392",
+    "discord": {
+      "unique_id": "295160376407097344",
+      "roles": [
+        {
+          "role": "Imanity",
+          "role_color": "#3498db"
+        }
+      ],
+      "avatar": "2e3a6e2c235396e2adb11ea3c61e53f8"
+    }
+  },
+  {
+    "player_id": "sakura",
+    "player_name": "Sakura",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-09",
+      "out": "2019-02-05"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1447",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1447"
+  },
+  {
+    "player_id": "cloud strife",
+    "player_name": "Cloud Strife",
+    "player_team": null,
+    "player_tag": null,
+    "is_staff": false,
+    "country": {
+      "name": "México",
+      "code": "mx"
+    },
+    "player_registry": {
+      "role": "Imanity",
+      "in": "2019-01-10",
+      "out": "2019-02-27"
+    },
+    "switch_fc": null,
+    "mkc_player_profile": "https://www.mariokartcentral.com/mkc/registry/players/1460",
+    "mkcentral_player_profile": "https://mkcentral.com/es/registry/players/profile?id=1460"
   }
 ]

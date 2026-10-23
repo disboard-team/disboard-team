@@ -7,6 +7,7 @@ import ObfuscatedSwitchFc from '../../components/ObfuscatedSwitchFc.astro';
 import players from '../../data/players.json';
 import wars from '../../data/wars.json';
 import { getPlayerStats, getPlayerWars } from '../../utils/stats.js';
+import { getDiscordAvatarUrl } from '../../utils/discord.js';
 
 export function getStaticPaths() {
   return players.map((player) => ({
@@ -23,7 +24,7 @@ const playerWars = getPlayerWars(player.player_id, wars);
 <Layout
   title={`『 Disboard 』 / ${player.player_name}`}
   description={`Perfil y estadísticas competitivas de ${player.player_name} en Mario Kart 8 Deluxe`}
-  image={player.discord_avatar_url}
+  image={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)}
 >
   <section class="contents">
     <SectionTitle title={`${player.player_name}'s Profile`} alt="選手たち" />
@@ -31,7 +32,7 @@ const playerWars = getPlayerWars(player.player_id, wars);
       <div class="detail flex player-container">
         <!-- Player card info -->
         <div class="player-profile">
-          <img src={player.discord_avatar_url || 'https://cdn.discordapp.com/embed/avatars/0.png'} alt={player.player_name} loading="lazy" />
+          <img src={getDiscordAvatarUrl(player.discord?.unique_id, player.discord?.avatar)} alt={player.player_name} loading="lazy" />
           <div class="player-description">
             <div>
               <span class={`fi fi-${(player.country?.code || 'es').toLowerCase()} fis`}></span>
