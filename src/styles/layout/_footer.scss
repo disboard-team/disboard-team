@@ -15,9 +15,9 @@ footer:before {
   left: 0;
 }
 footer .inner {
-  max-width: 1280px;
+  max-width: 1150px;
   margin: 0 auto;
-  padding: 82px 50px 25px;
+  padding: 82px 20px 25px;
   position: relative;
   text-align: center;
 }
@@ -42,7 +42,7 @@ footer .inner .global-navi ul li a p {
   letter-spacing: 2px;
   position: relative;
   text-align: left;
-  opacity: 0.6;
+  opacity: 0.65;
   font-family: $title-font;
   transition: opacity 0.25s ease, color 0.25s ease;
 }
@@ -102,7 +102,7 @@ footer .inner .global-navi ul li:not(:first-child):before {
   transform: rotate(30deg);
 }
 footer .inner .global-navi ul li + li {
-  margin: 20px 0 0 60px;
+  margin: 20px 0 0 50px;
 }
 footer .inner .social-navi {
   display: block;
@@ -112,7 +112,7 @@ footer .inner .social-navi {
 footer .inner .copyright {
   display: block;
   margin: 25px 0 0 0;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.65);
   font-size: 0.75rem;
   letter-spacing: 1px;
 }
