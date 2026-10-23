@@ -3,7 +3,7 @@ interface Props {
   name: string;
   tag: string;
   logo: string;
-  mkc_profile: string;
+  mkc_profile?: string | null;
 }
 
 const { name, tag, logo, mkc_profile } = Astro.props;

@@ -5,9 +5,11 @@ interface Props {
   name: string;
   tag?: string;
   inDate?: string;
-  fc?: string;
+  fc?: string | null;
   role?: string;
 }
+
+import ObfuscatedSwitchFc from './ObfuscatedSwitchFc.astro';
 
 const { avatarURL, country = 'es', name, tag, inDate, fc, role } = Astro.props;
 const countryCode = (country || 'es').toLowerCase();
@@ -41,7 +43,7 @@ const avatar = avatarURL || 'https://cdn.discordapp.com/embed/avatars/0.png';
     {fc && (
       <div class="player-fc-row">
         <i class="ri-gamepad-line"></i>
-        <span class="player-fc">{fc}</span>
+        <ObfuscatedSwitchFc code={fc} />
       </div>
     )}
   </div>

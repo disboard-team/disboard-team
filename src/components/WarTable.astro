@@ -122,11 +122,14 @@ const { wars } = Astro.props;
 
 <script>
   document.addEventListener('click', (event) => {
-    const openBtn = event.target.closest('.war-table-btn');
+    const target = event.target as Element | null;
+    if (!target) return;
+
+    const openBtn = target.closest<HTMLButtonElement>('.war-table-btn');
     if (openBtn) {
       const container = openBtn.closest('.war-table-container');
-      const modal = container?.querySelector('.war-table-modal');
-      const img = modal?.querySelector('.war-table-modal-img');
+      const modal = container?.querySelector<HTMLDialogElement>('.war-table-modal');
+      const img = modal?.querySelector<HTMLImageElement>('.war-table-modal-img');
       if (modal && img && !modal.open) {
         img.setAttribute('src', openBtn.dataset.image || '');
         modal.showModal();
@@ -134,13 +137,13 @@ const { wars } = Astro.props;
       return;
     }
 
-    const closeBtn = event.target.closest('.war-table-modal-close');
+    const closeBtn = target.closest<HTMLButtonElement>('.war-table-modal-close');
     if (closeBtn) {
-      closeBtn.closest('.war-table-modal')?.close();
+      closeBtn.closest<HTMLDialogElement>('.war-table-modal')?.close();
       return;
     }
 
-    const modal = event.target.closest('.war-table-modal');
+    const modal = target.closest<HTMLDialogElement>('.war-table-modal');
     if (modal && event.target === modal) {
       modal.close();
     }

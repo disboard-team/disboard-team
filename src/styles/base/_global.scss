@@ -314,8 +314,8 @@
 }
 
 .section-icon {
-  height: 192px;
-  width: auto;
+  width: 400px;
+  height: 150px;
   max-width: 100%;
   object-fit: contain;
   margin-right: 10px;
@@ -332,7 +332,8 @@
 
 @media only screen and (max-width: 767px) {
   .section-icon {
-    height: 96px;
+    width: 100%;
+    height: 150px;
   }
 }
 

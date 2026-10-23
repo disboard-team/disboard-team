@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
 import PlayerStats from '../../components/PlayerStats.astro';
 import WarTable from '../../components/WarTable.astro';
+import ObfuscatedSwitchFc from '../../components/ObfuscatedSwitchFc.astro';
 import players from '../../data/players.json';
 import wars from '../../data/wars.json';
 import { getPlayerStats, getPlayerWars } from '../../utils/stats.js';
@@ -46,7 +47,9 @@ const playerWars = getPlayerWars(player.player_id, wars);
                   </span>
                   {player.player_registry?.in || '2018-09-06'}
                 </span>
-                {player.switch_fc && <span class="player-fc">Switch FC: {player.switch_fc}</span>}
+                {player.switch_fc && (
+                  <span class="player-fc">Switch FC: <ObfuscatedSwitchFc code={player.switch_fc} /></span>
+                )}
               </div>
               <div class="profile-buttons">
                 {player.mkcentral_player_profile && (
