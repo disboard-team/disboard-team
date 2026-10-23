@@ -108,14 +108,13 @@
       .team-mkc-link {
         display: inline-flex;
         align-items: center;
-        gap: 2px;
-        padding: 4px 8px;
-        font-size: 0.6875rem;
-        font-weight: 600;
+        gap: 4px;
+        padding: 3px 8px;
+        background: rgba(255, 255, 255, 0.06);
         color: #fff;
-        background: rgba(191, 19, 117, 0.2);
-        border: 1px solid rgba(191, 19, 117, 0.4);
         border-radius: 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.6875rem;
         text-decoration: none;
         transition: all 0.2s ease;
 

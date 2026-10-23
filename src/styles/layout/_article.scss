@@ -11,7 +11,7 @@
         font-family: $title-font;
         position: relative;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
 
         h3 {
           margin: 0;
@@ -33,6 +33,7 @@
           // background: linear-gradient(90deg, rgba(191, 19, 117, 0.6) 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
           background: rgba(191, 19, 117, 0.6);
           margin-left: 18px;
+          margin-bottom: -3px;
         }
       }
 
@@ -70,7 +71,7 @@
       .heading {
         margin: 0 0 20px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
 
         h3 {
           margin: 0;
@@ -91,6 +92,7 @@
           // background: linear-gradient(90deg, rgba(191, 19, 117, 0.5) 0%, transparent 100%);
           background: rgba(191, 19, 117, 0.6);
           margin-left: 12px;
+          margin-bottom: -3px;
         }
       }
 

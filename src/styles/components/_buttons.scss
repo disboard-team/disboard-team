@@ -7,39 +7,20 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.06);
   color: #fff;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, rgba(191, 19, 117, 0.9) 0%, rgba(135, 11, 82, 0.95) 100%);
-  padding: 12px 28px;
   border-radius: 0;
-  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
-  box-shadow: 0 4px 14px rgba(191, 19, 117, 0.35);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-
-  &::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-    margin-left: 12px;
-    transform: rotate(45deg);
-    transition: transform 0.25s ease;
-  }
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.6875rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
 
   &:hover {
-    background: linear-gradient(135deg, #e62092 0%, #bf1375 100%);
-    box-shadow: 0 6px 20px rgba(191, 19, 117, 0.55);
-    transform: translateY(-2px);
-
-    &::after {
-      transform: translateX(3px) rotate(45deg);
-    }
+    background: $primary;
+    border-color: $primary-light;
+    box-shadow: 0 0 8px $primary-glow;
   }
 }
 
@@ -50,8 +31,8 @@
 }
 
 .detail .text-btn a {
-  width: 280px;
+  width: auto;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 3px 8px;
   display: inline-flex;
 }
