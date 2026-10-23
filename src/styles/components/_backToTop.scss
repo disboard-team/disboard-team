@@ -12,6 +12,7 @@
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 12px rgba(191, 19, 117, 0.4);
   transition: all 0.25s ease;
+  cursor: pointer;
 
   i, svg {
     color: #fff;

@@ -55,7 +55,7 @@ header {
             transition: opacity 0.25s ease, color 0.25s ease;
 
             span {
-              font-size: 0.625rem;
+              font-size: 0.75rem;
               letter-spacing: 2px;
               font-family: $japanese-font;
               display: inline-block;
@@ -283,7 +283,7 @@ header {
 
   .mobile-drawer .global-navi a p span {
     font-family: $japanese-font;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     display: inline-block;
   }
